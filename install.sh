@@ -150,7 +150,7 @@ case $OS_VERSION in
    *10.12*)
       cmdline_version="CLTools_Executables" ;; # Sierra
    *10.11*)
-      cmdline_version="CLTools_Executables"  # El Capitán
+      cmdline_version="CLTools_Executables"    # El Capitán
       pause_and_warn "Outdated OS. Consider upgrading before continuing." true;; # El Capitán
    *)
       fail "Sorry! You’ll have to upgrade your OS to $MINIMUM_MAC_OS or above." true;
@@ -253,3 +253,19 @@ inform "Installing .editorconfig..."
 mv .editorconfig $HOME/
 
 inform ".editorconfig downloaded and installed to $HOME/.editorconfig"
+
+#
+# Install .stylelintrc.json file.
+#
+if [ -e ${HOME}/.stylelintrc.json ]; then
+   pause_and_warn ".stylelintrc.json file exists. Renaming to .backup.stylelintrc.json" true
+   mv ${HOME}/.stylelintrc.json ${HOME}/.backup.stylelintrc.json
+fi
+
+inform "Downloading .stylelintrc.json..."
+curl -O https://gist.githubusercontent.com/code-warrior/a766f7c32bab9a82b467601800b00a46/raw/768717143df9db9c593dabb38c3c7aa63c87f66b/.stylelintrc.json
+
+inform "Installing .stylelintrc.json..."
+mv .stylelintrc.json $HOME/
+
+inform ".stylelintrc.json downloaded and installed to $HOME/.stylelintrc.json"
