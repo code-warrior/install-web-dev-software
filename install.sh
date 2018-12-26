@@ -297,6 +297,22 @@ mv .bashrc $HOME/
 inform ".bashrc downloaded and installed to $HOME/.bashrc"
 
 #####################################################################################
+# Install .bashrc file.
+#####################################################################################
+if [ -e ${HOME}/.bash_profile ]; then
+   pause_and_warn ".bash_profile file exists. Renaming to .backup.bash_profile" true
+   mv ${HOME}/.bash_profile ${HOME}/.backup.bash_profile
+fi
+
+inform "Downloading .bash_profile..."
+curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/.bash_profile
+
+inform "Installing .bash_profile..."
+mv .bash_profile $HOME/
+
+inform ".bash_profile downloaded and installed to $HOME/.bash_profile"
+
+#####################################################################################
 # Install Tomorrow Night Terminal theme.
 #####################################################################################
 inform "Downloading TomorrowNight.terminal..."
