@@ -217,3 +217,23 @@ else
    rm -fr IBM_Plex_Mono
    rm -fr IBM_Plex_Mono.zip
 fi
+
+#
+# Install the Ubunutu Mono typeface.
+#
+if [ -e ${HOME}/Library/Fonts/UbuntuMono-R.ttf ]; then
+   pause_and_warn "Ubuntu Mono Regular is already installed." true
+else
+   show "Downloading the Ubuntu Mono typeface..."
+   curl "https://fonts.google.com/download?family=Ubuntu%20Mono" -o Ubuntu_Mono.zip
+
+   show "Unzipping the Ubuntu Mono typeface into Font Book..."
+   unzip Ubuntu_Mono.zip -d Ubuntu_Mono
+
+   show "Installing the Ubuntu Mono typeface into Font Book..."
+   mv Ubuntu_Mono/*.ttf /Library/Fonts/
+
+   show "Removing un-needed local folders and files related to Ubuntu Mono..."
+   rm -fr Ubuntu_Mono
+   rm -fr Ubuntu_Mono.zip
+fi
