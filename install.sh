@@ -210,8 +210,8 @@ else
    inform "Unzipping the IBM Plex Mono typeface..."
    unzip IBM_Plex_Mono.zip -d IBM_Plex_Mono
 
-   mv IBM_Plex_Mono/*.ttf /Library/Fonts/
    inform "Installing the IBM Plex Mono typeface into Font Book..."
+   mv IBM_Plex_Mono/*.ttf ${HOME}/Library/Fonts/
 
    inform "Removing un-needed local folders and files related to IBM Plex Mono..."
    rm -fr IBM_Plex_Mono
@@ -231,7 +231,7 @@ else
    unzip Ubuntu_Mono.zip -d Ubuntu_Mono
 
    show "Installing the Ubuntu Mono typeface into Font Book..."
-   mv Ubuntu_Mono/*.ttf /Library/Fonts/
+   mv Ubuntu_Mono/*.ttf ${HOME}/Library/Fonts/
 
    show "Removing un-needed local folders and files related to Ubuntu Mono..."
    rm -fr Ubuntu_Mono
