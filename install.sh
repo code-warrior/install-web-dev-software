@@ -180,7 +180,7 @@ sudo defaults write com.apple.terminal StringEncodings -array 4
 show "Complete!"
 
 #
-# Check if Typora is already installed.
+# Install Typora for Markdown files, but first check if it is already installed.
 #
 if open -R "/Applications/Typora.app/"; then
    pause_and_warn "Typora is already installed on this machine."
