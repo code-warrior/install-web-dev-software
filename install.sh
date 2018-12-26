@@ -297,7 +297,7 @@ mv .bashrc $HOME/
 inform ".bashrc downloaded and installed to $HOME/.bashrc"
 
 #####################################################################################
-# Install .bashrc file.
+# Install .bash_profile file.
 #####################################################################################
 if [ -e ${HOME}/.bash_profile ]; then
    pause_and_warn ".bash_profile file exists. Renaming to .backup.bash_profile" true
