@@ -283,3 +283,37 @@ inform "which is the second tab on the top, then scroll all the way down along t
 inform "left column until you find TomorrowNight. Click Default, then close the "
 inform "Profiles page."
 pause_and_warn "Once the theme is installed, come back to this Terminal window."
+
+#
+# Install Spectacle.
+#
+if open -R "/Applications/Spectacle.app/"; then
+   pause_and_warn "Spectacle is already installed on this machine." true
+else
+   inform "Downloading Spectacle..."
+   curl -O https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.2.zip
+
+   inform "Unzipping Spectacle..."
+   unzip Spectacle+1.2.zip
+
+   inform "Installing Spectacle into Applications..."
+   mv Spectacle.app /Applications
+
+   inform "Removing Spectacle’s .zip file..."
+   rm Spectacle+1.2.zip
+
+   inform "Opening Spectacle for the first time." true
+   open /Applications/Spectacle.app
+
+   warn "Click Open System Preferences, unlock the lock in the lower left " true
+   warn "corner of Security & Privacy, if it’s locked, and check the box to "
+   pause_and_warn "the left of the Spectacle icon. Lock the dialog box, then continue."
+
+   inform "Downloading custom Spectacle shortcuts..."
+   curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/Shortcuts.json
+
+   inform "Installing custom Spectacle shortcuts..."
+   mv Shortcuts.json ~/Library/Application\ Support/Spectacle/
+
+   pause_and_warn "Restart Spectacle."
+fi
