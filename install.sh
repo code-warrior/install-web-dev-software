@@ -183,7 +183,7 @@ show "Complete!"
 # Install Typora for Markdown files, but first check if it is already installed.
 #
 if open -R "/Applications/Typora.app/"; then
-   pause_and_warn "Typora is already installed on this machine."
+   pause_and_warn "Typora is already installed on this machine." true
 else
    inform "Downloading Typora..."
    curl -O https://typora.io/download/Typora.dmg
