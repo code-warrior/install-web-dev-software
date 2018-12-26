@@ -201,7 +201,7 @@ fi
 #
 # Install the IBM Plex Mono typeface.
 #
-if [ -e ${HOME}/Library/Fonts/IBMPlexMono-Regular.otf ]; then
+if [ -e ${HOME}/Library/Fonts/IBMPlexMono-Regular.ttf ]; then
    pause_and_warn "IBM Plex Mono Regular is already installed." true
 else
    show "Downloading the IBM Plex Mono typeface..."
