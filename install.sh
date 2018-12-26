@@ -197,3 +197,23 @@ else
    rm Typora.dmg
    inform "Typora’s installer image ejected and its installer removed."
 fi
+
+#
+# Install the IBM Plex Mono typeface.
+#
+if [ -e ${HOME}/Library/Fonts/IBMPlexMono-Regular.otf ]; then
+   pause_and_warn "IBM Plex Mono Regular is already installed." true
+else
+   show "Downloading the IBM Plex Mono typeface..."
+   curl "https://fonts.google.com/download?family=IBM%20Plex%20Mono" -o IBM_Plex_Mono.zip
+
+   show "Unzipping the IBM Plex Mono typeface..."
+   unzip IBM_Plex_Mono.zip -d IBM_Plex_Mono
+
+   show "Installing the IBM Plex Mono typeface into Font Book..."
+   mv IBM_Plex_Mono/*.ttf /Library/Fonts/
+
+   show "Removing un-needed local folders and files related to IBM Plex Mono..."
+   rm -fr IBM_Plex_Mono
+   rm -fr IBM_Plex_Mono.zip
+fi
