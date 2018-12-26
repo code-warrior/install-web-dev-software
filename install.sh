@@ -407,3 +407,33 @@ else
 
    pause_and_warn "Restart Spectacle."
 fi
+
+#####################################################################################
+# Install Atom packages and config.cson.
+#####################################################################################
+if [ -e ${HOME}/.atom/config.cson ]; then
+   pause_and_warn "Atom’s config.cson file exists. Renaming to .atom/backup.config.cson" true
+   mv ${HOME}/.atom/config.cson ${HOME}/.atom/backup.config.cson
+fi
+
+inform "Downloading Atom’s config.cson..."
+curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/atom/config.cson
+
+inform "Installing Atom’s config.cson..."
+mv config.cson $HOME/.atom/
+
+inform "Installing Atom packages..."
+if [[ $(apm install) ]]; then
+   echo $(apm install busy-signal)
+   echo $(apm install intentions)
+   echo $(apm install linter-ui-default)
+   echo $(apm install linter)
+   echo $(apm install editorconfig)
+   echo $(apm install w3c-validation)
+   echo $(apm install linter-stylelint)
+   echo $(apm install emmet)
+   echo $(apm install linter-sass-lint)
+else
+   pause_and_warn "Atom’s package manager (APM) not install. Exiting..."
+   exit 0
+fi
