@@ -113,9 +113,9 @@ inform "Checking the validity of this set up. If it is not valid, it will "
 inform "fail or warn you."
 echo "..."
 
-#
+#####################################################################################
 # Check if current user is admin.
-#
+#####################################################################################
 if echo "$USER_GRPS" | grep -q -w admin; then
   echo "" > /dev/null
 else
@@ -134,14 +134,18 @@ if [ "$OS_NUMBER" -lt "11" ]; then
   exit 1
 fi
 
+#####################################################################################
 # Check for recommended software updates
+#####################################################################################
 inform "Running software update on Mac OS... " true
 sudo softwareupdate -i -r --ignore iTunes > /dev/null 2>&1
 show "Software updated!"
 
 inform "Checking for XCode Command Line Tools..." true
 
+#####################################################################################
 # Check that command line tools are installed
+#####################################################################################
 case $OS_VERSION in
    *10.14*)
       cmdline_version="CLTools_Executables" ;; # Mojave
@@ -157,7 +161,9 @@ case $OS_VERSION in
       exit 1;;
 esac
 
+#####################################################################################
 # Check for Command Line Tools based on OS versions
+#####################################################################################
 if [ ! -z $(pkgutil --pkgs=com.apple.pkg.$cmdline_version) ]; then
   show "Command Line Tools are installed!"
 else
@@ -170,18 +176,22 @@ fi
 
 inform "Setting OS configurations..." true
 
+#####################################################################################
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
+#####################################################################################
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+#####################################################################################
 # Only use UTF-8 in Terminal.app
+#####################################################################################
 sudo defaults write com.apple.terminal StringEncodings -array 4
 
 show "Complete!"
 
-#
+#####################################################################################
 # Install Typora for Markdown files, but first check if it is already installed.
-#
+#####################################################################################
 if open -R "/Applications/Typora.app/"; then
    pause_and_warn "Typora is already installed on this machine." true
 else
@@ -198,9 +208,9 @@ else
    inform "Typora’s installer image ejected and its installer removed."
 fi
 
-#
+#####################################################################################
 # Install the IBM Plex Mono typeface.
-#
+#####################################################################################
 if [ -e ${HOME}/Library/Fonts/IBMPlexMono-Regular.ttf ]; then
    pause_and_warn "IBM Plex Mono Regular is already installed." true
 else
@@ -218,9 +228,9 @@ else
    rm -fr IBM_Plex_Mono.zip
 fi
 
-#
+#####################################################################################
 # Install the Ubunutu Mono typeface.
-#
+#####################################################################################
 if [ -e ${HOME}/Library/Fonts/UbuntuMono-Regular.ttf ]; then
    pause_and_warn "Ubuntu Mono Regular is already installed." true
 else
@@ -238,9 +248,9 @@ else
    rm -fr Ubuntu_Mono.zip
 fi
 
-#
+#####################################################################################
 # Install .editorconfig file.
-#
+#####################################################################################
 if [ -e ${HOME}/.editorconfig ]; then
    pause_and_warn ".editorconfig file exists. Renaming to .backup.editorconfig" true
    mv ${HOME}/.editorconfig ${HOME}/.backup.editorconfig
@@ -254,9 +264,9 @@ mv .editorconfig $HOME/
 
 inform ".editorconfig downloaded and installed to $HOME/.editorconfig"
 
-#
+#####################################################################################
 # Install .stylelintrc.json file.
-#
+#####################################################################################
 if [ -e ${HOME}/.stylelintrc.json ]; then
    pause_and_warn ".stylelintrc.json file exists. Renaming to .backup.stylelintrc.json" true
    mv ${HOME}/.stylelintrc.json ${HOME}/.backup.stylelintrc.json
@@ -270,9 +280,9 @@ mv .stylelintrc.json $HOME/
 
 inform ".stylelintrc.json downloaded and installed to $HOME/.stylelintrc.json"
 
-#
+#####################################################################################
 # Install Tomorrow Night Terminal theme.
-#
+#####################################################################################
 inform "Downloading TomorrowNight.terminal..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/TomorrowNight.terminal
 
@@ -284,9 +294,9 @@ inform "left column until you find TomorrowNight. Click Default, then close the 
 inform "Profiles page."
 pause_and_warn "Once the theme is installed, come back to this Terminal window."
 
-#
+#####################################################################################
 # Install Spectacle.
-#
+#####################################################################################
 if open -R "/Applications/Spectacle.app/"; then
    pause_and_warn "Spectacle is already installed on this machine." true
 else
