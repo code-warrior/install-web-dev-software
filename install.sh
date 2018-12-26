@@ -221,7 +221,7 @@ fi
 #
 # Install the Ubunutu Mono typeface.
 #
-if [ -e ${HOME}/Library/Fonts/UbuntuMono-R.ttf ]; then
+if [ -e ${HOME}/Library/Fonts/UbuntuMono-Regular.ttf ]; then
    pause_and_warn "Ubuntu Mono Regular is already installed." true
 else
    show "Downloading the Ubuntu Mono typeface..."
