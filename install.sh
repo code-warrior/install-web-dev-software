@@ -281,6 +281,22 @@ mv .stylelintrc.json $HOME/
 inform ".stylelintrc.json downloaded and installed to $HOME/.stylelintrc.json"
 
 #####################################################################################
+# Install .bashrc file.
+#####################################################################################
+if [ -e ${HOME}/.bashrc ]; then
+   pause_and_warn ".bashrc file exists. Renaming to .backup.bashrc" true
+   mv ${HOME}/.bashrc ${HOME}/.backup.bashrc
+fi
+
+inform "Downloading .bashrc..."
+curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/.bashrc
+
+inform "Installing .bashrc..."
+mv .bashrc $HOME/
+
+inform ".bashrc downloaded and installed to $HOME/.bashrc"
+
+#####################################################################################
 # Install Tomorrow Night Terminal theme.
 #####################################################################################
 inform "Downloading TomorrowNight.terminal..."
