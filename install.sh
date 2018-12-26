@@ -224,16 +224,16 @@ fi
 if [ -e ${HOME}/Library/Fonts/UbuntuMono-Regular.ttf ]; then
    pause_and_warn "Ubuntu Mono Regular is already installed." true
 else
-   show "Downloading the Ubuntu Mono typeface..."
+   inform "Downloading the Ubuntu Mono typeface..."
    curl "https://fonts.google.com/download?family=Ubuntu%20Mono" -o Ubuntu_Mono.zip
 
-   show "Unzipping the Ubuntu Mono typeface into Font Book..."
+   inform "Unzipping the Ubuntu Mono typeface into Font Book..."
    unzip Ubuntu_Mono.zip -d Ubuntu_Mono
 
-   show "Installing the Ubuntu Mono typeface into Font Book..."
+   inform "Installing the Ubuntu Mono typeface into Font Book..."
    mv Ubuntu_Mono/*.ttf ${HOME}/Library/Fonts/
 
-   show "Removing un-needed local folders and files related to Ubuntu Mono..."
+   inform "Removing un-needed local folders and files related to Ubuntu Mono..."
    rm -fr Ubuntu_Mono
    rm -fr Ubuntu_Mono.zip
 fi
