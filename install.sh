@@ -10,20 +10,20 @@ elif infocmp xterm-256color >/dev/null 2>&1; then
 fi
 
 # Reset formatting
-RESET=$(      tput sgr0)
+RESET=$(tput sgr0)
 
 # Foreground color
-BLACK=$(      tput setaf 0)
-WHITE=$(      tput setaf 7)
+BLACK=$(tput setaf 0)
+WHITE=$(tput setaf 7)
 
 # Background color
-BG_RED=$(     tput setab 1)
-BG_GREEN=$(   tput setab 2)
-BG_YELLOW=$(  tput setab 3)
-BG_WHITE=$(   tput setab 7)
+BG_RED=$(tput setab 1)
+BG_GREEN=$(tput setab 2)
+BG_YELLOW=$(tput setab 3)
+BG_WHITE=$(tput setab 7)
 
 # Style
-BOLD=$(       tput bold)
+BOLD=$(tput bold)
 
 function show () {
   echo -e "${BG_WHITE}${BLACK}> $* ${RESET}"
