@@ -424,8 +424,8 @@ if [[ $(apm install) ]]; then
    apm install linter-sass-lint
 else
    fail "Atom’s package manager (APM) is not installed. Launch Atom, " true
-   fail "click “Atom” in the menu bar on the left, right next to the  icon,"
-   fail "then choose “Install Shell Commands”. "
+   fail "click Atom in the menu bar on the left, right next to the Apple icon,"
+   fail "then choose Install Shell Commands. "
    fail "Close Atom, then restart this script. Exiting..."
 
    exit 0
