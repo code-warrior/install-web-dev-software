@@ -438,6 +438,10 @@ if [[ $(apm install) ]]; then
    echo $(apm install emmet)
    echo $(apm install linter-sass-lint)
 else
-   pause_and_warn "Atom’s package manager (APM) not install. Exiting..."
+   fail "Atom’s package manager (APM) is not installed. Launch Atom, " true
+   fail "click “Atom” in the menu bar on the left, right next to the  icon,"
+   fail "then choose “Install Shell Commands”. "
+   fail "Close Atom, then restart this script. Exiting..."
+
    exit 0
 fi
