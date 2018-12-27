@@ -413,15 +413,15 @@ mv config.cson "$HOME/.atom/"
 
 inform "Installing Atom packages..."
 if [[ $(apm install) ]]; then
-   echo $(apm install busy-signal)
-   echo $(apm install intentions)
-   echo $(apm install linter-ui-default)
-   echo $(apm install linter)
-   echo $(apm install editorconfig)
-   echo $(apm install w3c-validation)
-   echo $(apm install linter-stylelint)
-   echo $(apm install emmet)
-   echo $(apm install linter-sass-lint)
+   apm install busy-signal
+   apm install intentions
+   apm install linter-ui-default
+   apm install linter
+   apm install editorconfig
+   apm install w3c-validation
+   apm install linter-stylelint
+   apm install emmet
+   apm install linter-sass-lint
 else
    fail "Atom’s package manager (APM) is not installed. Launch Atom, " true
    fail "click “Atom” in the menu bar on the left, right next to the  icon,"
