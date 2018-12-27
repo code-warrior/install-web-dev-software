@@ -93,7 +93,7 @@ DESCRIPTION=`cat << EOFS
 EOFS`
 
 inform "Your current setup is:" true
-printf "$DESCRIPTION\n"
+printf "%s\n" "$DESCRIPTION"
 inform "Checking the validity of this set up. If it is not valid, it will "
 inform "fail or warn you."
 echo "..."
