@@ -82,15 +82,14 @@ USER_GRPS=$(id -Gn "$USER_NAME")
 OS_NUMBER=$(echo "$OS_VERSION" | cut -d "." -f 2)
 MAC_ADDRS=$(ifconfig en0 | grep ether | sed -e 's/^[ \t|ether|\s|\n]*//')
 
-DESCRIPTION=`cat << EOFS
-      Computer Type:   Mac OS $OS_VERSION
-      Short user name: $USER_NAME
-      Long user name:  $FULL_NAME
-      Computer name:   $COMP_NAME
-      LocalHost name:  $LOCL_NAME
-      Full Hostname:   $HOST_NAME
-      Connection MAC:  $MAC_ADDRS
-EOFS`
+DESCRIPTION=$(
+      Computer Type:   Mac OS "$OS_VERSION"
+      Short user name: "$USER_NAME"
+      Long user name:  "$FULL_NAME"
+      Computer name:   "$COMP_NAME"
+      LocalHost name:  "$LOCL_NAME"
+      Full Hostname:   "$HOST_NAME"
+      Connection MAC:  "$MAC_ADDRS")
 
 inform "Your current setup is:" true
 printf "%s\n" "$DESCRIPTION"
