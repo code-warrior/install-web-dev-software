@@ -374,6 +374,9 @@ inform "left column until you find TomorrowNight. Click Default, then close the 
 inform "Profiles page."
 pause_and_warn "Once the theme is installed, come back to this Terminal window."
 
+inform "Removing un-needed TomorrowNight.terminal file..."
+rm -f TomorrowNight.terminal
+
 #####################################################################################
 # Install Spectacle.
 #####################################################################################
