@@ -395,12 +395,13 @@ else
    inform "Removing Spectacle’s .zip file..."
    rm Spectacle+1.2.zip
 
-   inform "Opening Spectacle for the first time." true
+   inform "Launching Spectacle..." true
    open /Applications/Spectacle.app
 
-   warn "Click Open System Preferences, unlock the lock in the lower left " true
-   warn "corner of Security & Privacy, if it’s locked, and check the box to "
-   pause_and_warn "the left of the Spectacle icon. Lock the dialog box, then continue."
+   warn "If you’re running Spectacle for the first time, click Open System " true
+   warn "Preferences, unlock the lock in the lower left corner of Security "
+   warn "& Privacy (if it’s locked), and check the box to the left of the"
+   pause_and_warn "Spectacle icon. Lock the dialog box, then continue."
 
    inform "Downloading custom Spectacle shortcuts..."
    curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/Shortcuts.json
