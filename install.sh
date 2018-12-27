@@ -148,7 +148,7 @@ esac
 #####################################################################################
 # Check for Command Line Tools based on OS versions
 #####################################################################################
-if [ ! -z $(pkgutil --pkgs=com.apple.pkg.$cmdline_version) ]; then
+if [ -n "$(pkgutil --pkgs=com.apple.pkg.$cmdline_version)" ]; then
   show "Command Line Tools are installed!"
 else
   fail "Command Line Tools are not installed!" true
