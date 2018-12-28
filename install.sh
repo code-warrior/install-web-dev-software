@@ -111,6 +111,7 @@ DESCRIPTION=`cat << EOFS
       Full Hostname:   $HOST_NAME
       Connection MAC:  $MAC_ADDRS
 EOFS`
+MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
 inform "Your current setup is:" true
 printf "%s\n" "$DESCRIPTION"
