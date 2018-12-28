@@ -124,6 +124,7 @@ else
   fail "The current user does not have administrator privileges. This " true
   fail "program must be run by a user with admin privileges."
   fail "Exiting..." true
+
   exit 1
 fi
 
@@ -133,6 +134,7 @@ if [ "$OS_NUMBER" -lt "11" ]; then
   fail "from 2014 (10.10, Yosemite) or older. To be safe, exit this"
   fail "installation, update to Mojave, then restart this program."
   fail "Exiting..." true
+
   exit 1
 fi
 
@@ -160,6 +162,7 @@ case $OS_VERSION in
       pause_and_warn "Outdated OS. Consider upgrading before continuing." true;; # El Capitán
    *)
       fail "Sorry! You’ll have to upgrade your OS to $MINIMUM_MAC_OS or above." true;
+
       exit 1;;
 esac
 
@@ -173,6 +176,7 @@ else
   fail "Running 'xcode-select --install' Please click Install!"
   fail "After installing, please rerun this script."
   xcode-select --install
+
   exit 1
 fi
 
