@@ -101,23 +101,19 @@ FULL_NAME=$(finger "$USER_NAME" | awk '/Name:/ {print $4" "$5}')
 USER_GRPS=$(id -Gn "$USER_NAME")
 OS_NUMBER=$(echo "$OS_VERSION" | cut -d "." -f 2)
 MAC_ADDRS=$(ifconfig en0 | grep ether | sed -e 's/^[ \t|ether|\s|\n]*//')
-
-DESCRIPTION=`cat << EOFS
-      Computer Type:   Mac OS $OS_VERSION
-      Short user name: $USER_NAME
-      Long user name:  $FULL_NAME
-      Computer name:   $COMP_NAME
-      LocalHost name:  $LOCL_NAME
-      Full Hostname:   $HOST_NAME
-      Connection MAC:  $MAC_ADDRS
-EOFS`
 MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
 inform "Your current setup is:" true
-printf "%s\n" "$DESCRIPTION"
+printf ">>>      Computer Type:   Mac OS %s\n" "$OS_VERSION"
+printf ">>>      Short user name: %s\n" "$USER_NAME"
+printf ">>>      Long user name:  %s\n" "$FULL_NAME"
+printf ">>>      Computer name:   %s\n" "$COMP_NAME"
+printf ">>>      Localhost name:  %s\n" "$LOCL_NAME"
+printf ">>>      Full hostname:   %s\n" "$HOST_NAME"
+printf ">>>      Connection MAC:  %s\n" "$MAC_ADDRS"
 inform "Checking the validity of this set up. If it is not valid, it will "
 inform "fail or warn you."
-echo "..."
+pause_and_warn
 
 #####################################################################################
 # Check if current user is admin.
