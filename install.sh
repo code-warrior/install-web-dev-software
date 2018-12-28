@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-MINIMUM_MAC_OS="10.11.0"
-
 # set 256 color profile where possible
 if [[ $COLORTERM == gnome-* && $TERM == xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
   export TERM=gnome-256color
@@ -89,8 +87,8 @@ inform "will not echo to The Terminal the password as you type: "
 
 sudo -p "Password:" echo "${BG_WHITE}> Thank you! ${RESET}"
 
+MINIMUM_MAC_OS="10.11.0"
 OS_VERSION=$(sw_vers -productVersion)
-
 COMP_NAME=$(scutil --get ComputerName)
 LOCL_NAME=$(scutil --get LocalHostName)
 HOST_NAME=$(hostname)
