@@ -104,6 +104,7 @@ MAC_ADDRS=$(ifconfig en0 | grep ether | sed -e 's/^[ \t|ether|\s|\n]*//')
 MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
 inform "Your current setup is:" true
+inform
 printf ">>>      Computer Type:   Mac OS %s\n" "$OS_VERSION"
 printf ">>>      Short user name: %s\n" "$USER_NAME"
 printf ">>>      Long user name:  %s\n" "$FULL_NAME"
@@ -111,6 +112,7 @@ printf ">>>      Computer name:   %s\n" "$COMP_NAME"
 printf ">>>      Localhost name:  %s\n" "$LOCL_NAME"
 printf ">>>      Full hostname:   %s\n" "$HOST_NAME"
 printf ">>>      Connection MAC:  %s\n" "$MAC_ADDRS"
+inform
 inform "Checking the validity of this set up. If it is not valid, it will "
 inform "fail or warn you."
 pause_and_warn
