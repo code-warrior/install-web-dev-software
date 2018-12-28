@@ -200,7 +200,7 @@ show "Complete!"
 #####################################################################################
 # Install Typora for Markdown files, but first check if it is already installed.
 #####################################################################################
-if open -R "/Applications/Typora.app/"; then
+if [ -d "/Applications/Typora.app/" ]; then
    pause_and_warn "Typora is already installed on this machine." true
 else
    inform "Downloading Typora..."
@@ -404,7 +404,7 @@ rm -f TomorrowNight.terminal
 #####################################################################################
 # Install Spectacle.
 #####################################################################################
-if open -R "/Applications/Spectacle.app/"; then
+if [ -d "/Applications/Spectacle.app/" ]; then
    pause_and_warn "Spectacle is already installed on this machine." true
 else
    inform "Downloading Spectacle..."
