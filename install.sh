@@ -202,7 +202,8 @@ sudo defaults write com.apple.terminal StringEncodings -array 4
 # Install Typora for Markdown files, but first check if it is already installed.
 #####################################################################################
 if [ -d "/Applications/Typora.app/" ]; then
-   pause_and_warn "Typora is already installed on this machine." true
+   inform "Typora is already installed on this machine." true
+   pause_and_warn
 else
    inform "Downloading Typora..."
    curl -O https://typora.io/download/Typora.dmg
@@ -221,7 +222,8 @@ fi
 # Install the IBM Plex Mono typeface.
 #####################################################################################
 if [ -e "$HOME/Library/Fonts/IBMPlexMono-Regular.ttf" ]; then
-   pause_and_warn "IBM Plex Mono Regular is already installed." true
+   inform "IBM Plex Mono Regular is already installed." true
+   pause_and_warn
 else
    inform "Downloading the IBM Plex Mono typeface..."
    curl "https://fonts.google.com/download?family=IBM%20Plex%20Mono" -o IBM_Plex_Mono.zip
@@ -241,7 +243,8 @@ fi
 # Install the Ubunutu Mono typeface.
 #####################################################################################
 if [ -e "$HOME/Library/Fonts/UbuntuMono-Regular.ttf" ]; then
-   pause_and_warn "Ubuntu Mono Regular is already installed." true
+   inform "Ubuntu Mono Regular is already installed." true
+   pause_and_warn
 else
    inform "Downloading the Ubuntu Mono typeface..."
    curl "https://fonts.google.com/download?family=Ubuntu%20Mono" -o Ubuntu_Mono.zip
@@ -406,7 +409,8 @@ rm -f TomorrowNight.terminal
 # Install Spectacle.
 #####################################################################################
 if [ -d "/Applications/Spectacle.app/" ]; then
-   pause_and_warn "Spectacle is already installed on this machine." true
+   inform "Spectacle is already installed on this machine." true
+   pause_and_warn
 else
    inform "Downloading Spectacle..."
    curl -O https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.2.zip
@@ -426,7 +430,8 @@ else
    warn "If you’re running Spectacle for the first time, click Open System " true
    warn "Preferences, unlock the lock in the lower left corner of Security "
    warn "& Privacy (if it’s locked), and check the box to the left of the"
-   pause_and_warn "Spectacle icon. Lock the dialog box, then continue."
+   warn "Spectacle icon. Lock the dialog box, then continue."
+   pause_and_warn
 
    inform "Downloading custom Spectacle shortcuts..."
    curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/Shortcuts.json
