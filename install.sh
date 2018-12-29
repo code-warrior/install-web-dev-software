@@ -216,11 +216,13 @@ else
    inform "proceeding."
    pause_and_warn
 
+   inform "Ejecting Typora Disc Image..." true
    diskutil eject /Volumes/Typora/
 
    inform "Removing Typora Disc Image..." true
    rm -f Typora.dmg
 
+   inform "Typora’s installer image ejected and its installer removed." true
 fi
 
 #####################################################################################
@@ -239,8 +241,10 @@ else
    inform "Installing the IBM Plex Mono typeface into Font Book..."
    mv IBM_Plex_Mono/*.ttf "$HOME/Library/Fonts/"
 
+   inform "Removing un-needed IBM_Plex_Mono folder..." true
    rm -fr IBM_Plex_Mono
 
+   inform "Removing un-needed IBM_Plex_Mono.zip file..." true
    rm -fr IBM_Plex_Mono.zip
 fi
 
@@ -260,8 +264,10 @@ else
    inform "Installing the Ubuntu Mono typeface into Font Book..."
    mv -v Ubuntu_Mono/*.ttf "$HOME/Library/Fonts/"
 
+   inform "Removing Ubuntu_Mono folder..." true
    rm -fr Ubuntu_Mono
 
+   inform "Removing Ubuntu_Mono.zip file..." true
    rm -fr Ubuntu_Mono.zip
 fi
 
