@@ -147,11 +147,11 @@ inform "Running software update on Mac OS... " true
 sudo softwareupdate -i -r --ignore iTunes > /dev/null 2>&1
 show "Software updated!"
 
-inform "Checking for XCode Command Line Tools..." true
-
 #####################################################################################
 # Check that command line tools are installed
 #####################################################################################
+inform "Checking for XCode Command Line Tools..." true
+
 case $OS_VERSION in
    *10.14*)
       cmdline_version="CLTools_Executables" ;; # Mojave
