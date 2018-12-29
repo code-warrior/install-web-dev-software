@@ -32,7 +32,7 @@ function show () {
 }
 
 function inform () {
-   if [[ $2 ]]; then
+   if [[ -n $2 ]]; then
       echo "";
    fi
 
@@ -40,7 +40,7 @@ function inform () {
 }
 
 function warn () {
-   if [[ $2 ]]; then
+   if [[ -n $2 ]]; then
       echo "";
    fi
 
@@ -48,7 +48,7 @@ function warn () {
 }
 
 function fail () {
-   if [[ $2 ]]; then
+   if [[ -n $2 ]]; then
       echo "";
    fi
 
@@ -56,7 +56,7 @@ function fail () {
 }
 
 function pause_awhile () {
-   if [[ $2 ]]; then
+   if [[ -n $2 ]]; then
       echo "";
    fi
 
@@ -66,7 +66,7 @@ function pause_awhile () {
 }
 
 function pause_and_warn () {
-   if [[ $2 ]]; then
+   if [[ -n $2 ]]; then
       echo "";
    fi
 
@@ -451,7 +451,7 @@ inform "Installing Atom’s config.cson..."
 mv -v config.cson "$HOME/.atom/"
 
 inform "Installing Atom packages..."
-if [[ $(apm install) ]]; then
+if [ -n "$(apm install)" ]; then
    apm install busy-signal
    apm install intentions
    apm install linter-ui-default
