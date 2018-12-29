@@ -198,8 +198,6 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 inform "Setting OS option that accepts UTF-8 as input in The Terminal." true
 sudo defaults write com.apple.terminal StringEncodings -array 4
 
-show "Complete!"
-
 #####################################################################################
 # Install Typora for Markdown files, but first check if it is already installed.
 #####################################################################################
