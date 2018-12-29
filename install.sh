@@ -188,11 +188,14 @@ inform "Setting OS configurations..." true
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 #####################################################################################
+inform "Setting OS option that, when clicking the clock in the login window, " true
+inform "reveals IP address, hostname, and OS version."
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 #####################################################################################
 # Only use UTF-8 in Terminal.app
 #####################################################################################
+inform "Setting OS option that accepts UTF-8 as input in The Terminal." true
 sudo defaults write com.apple.terminal StringEncodings -array 4
 
 show "Complete!"
