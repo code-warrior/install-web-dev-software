@@ -465,7 +465,7 @@ else
    fail "Atom’s package manager (APM) is not installed. Launch Atom, " true
    fail "click Atom in the menu bar on the left, right next to the Apple icon,"
    fail "then choose Install Shell Commands. "
-   fail "Close Atom, then restart this script. Exiting..."
+   fail "Close Atom, then restart this script. Exiting..." true
 
    exit 0
 fi
