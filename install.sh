@@ -249,7 +249,7 @@ else
    unzip Ubuntu_Mono.zip -d Ubuntu_Mono
 
    inform "Installing the Ubuntu Mono typeface into Font Book..."
-   mv Ubuntu_Mono/*.ttf "$HOME/Library/Fonts/"
+   mv -v Ubuntu_Mono/*.ttf "$HOME/Library/Fonts/"
 
    inform "Removing un-needed local folders and files related to Ubuntu Mono..."
    rm -fr Ubuntu_Mono
@@ -261,14 +261,14 @@ fi
 #####################################################################################
 if [ -e "$HOME/.editorconfig" ]; then
    pause_and_warn ".editorconfig file exists. Renaming to .backup.editorconfig" true
-   mv "$HOME/.editorconfig" "$HOME/.backup.editorconfig"
+   mv -v "$HOME/.editorconfig" "$HOME/.backup.editorconfig"
 fi
 
 inform "Downloading .editorconfig..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/.editorconfig
 
 inform "Installing .editorconfig..."
-mv .editorconfig "$HOME/"
+mv -v .editorconfig "$HOME/"
 
 inform ".editorconfig downloaded and installed to $HOME/.editorconfig"
 
@@ -277,14 +277,14 @@ inform ".editorconfig downloaded and installed to $HOME/.editorconfig"
 #####################################################################################
 if [ -e "$HOME/.stylelintrc.json" ]; then
    pause_and_warn ".stylelintrc.json file exists. Renaming to .backup.stylelintrc.json" true
-   mv "$HOME/.stylelintrc.json" "$HOME/.backup.stylelintrc.json"
+   mv -v "$HOME/.stylelintrc.json" "$HOME/.backup.stylelintrc.json"
 fi
 
 inform "Downloading .stylelintrc.json..."
 curl -O https://gist.githubusercontent.com/code-warrior/a766f7c32bab9a82b467601800b00a46/raw/768717143df9db9c593dabb38c3c7aa63c87f66b/.stylelintrc.json
 
 inform "Installing .stylelintrc.json..."
-mv .stylelintrc.json "$HOME/"
+mv -v .stylelintrc.json "$HOME/"
 
 inform ".stylelintrc.json downloaded and installed to $HOME/.stylelintrc.json"
 
@@ -293,14 +293,14 @@ inform ".stylelintrc.json downloaded and installed to $HOME/.stylelintrc.json"
 #####################################################################################
 if [ -e "$HOME/.sass-lint.yml" ]; then
    pause_and_warn ".sass-lint.yml file exists. Renaming to .backup.sass-lint.yml" true
-   mv "$HOME/.sass-lint.yml" "$HOME/.backup.sass-lint.yml"
+   mv -v "$HOME/.sass-lint.yml" "$HOME/.backup.sass-lint.yml"
 fi
 
 inform "Downloading .sass-lint.yml..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/sass/.sass-lint.yml
 
 inform "Installing .sass-lint.yml..."
-mv .sass-lint.yml "$HOME/"
+mv -v .sass-lint.yml "$HOME/"
 
 inform ".sass-lint.yml downloaded and installed to $HOME/.sass-lint.yml"
 
@@ -309,14 +309,14 @@ inform ".sass-lint.yml downloaded and installed to $HOME/.sass-lint.yml"
 #####################################################################################
 if [ -e "$HOME/.git-prompt.sh" ]; then
    pause_and_warn ".git-prompt.sh file exists. Renaming to .backup.git-prompt.sh" true
-   mv "$HOME/.git-prompt.sh" "$HOME/.backup.git-prompt.sh"
+   mv -v "$HOME/.git-prompt.sh" "$HOME/.backup.git-prompt.sh"
 fi
 
 inform "Downloading .git-prompt.sh..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/.git-prompt.sh
 
 inform "Installing .git-prompt.sh..."
-mv .git-prompt.sh "$HOME/"
+mv -v .git-prompt.sh "$HOME/"
 
 inform ".git-prompt.sh downloaded and installed to $HOME/.git-prompt.sh"
 
@@ -325,14 +325,14 @@ inform ".git-prompt.sh downloaded and installed to $HOME/.git-prompt.sh"
 #####################################################################################
 if [ -e "$HOME/.git-completion.sh" ]; then
    pause_and_warn ".git-completion.sh file exists. Renaming to .backup.git-completion.sh" true
-   mv "$HOME/.git-completion.sh" "$HOME/.backup.git-completion.sh"
+   mv -v "$HOME/.git-completion.sh" "$HOME/.backup.git-completion.sh"
 fi
 
 inform "Downloading .git-completion.sh..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/.git-completion.sh
 
 inform "Installing .git-completion.sh..."
-mv .git-completion.sh "$HOME/"
+mv -v .git-completion.sh "$HOME/"
 
 inform ".git-completion.sh downloaded and installed to $HOME/.git-completion.sh"
 
@@ -341,14 +341,14 @@ inform ".git-completion.sh downloaded and installed to $HOME/.git-completion.sh"
 #####################################################################################
 if [ -e "$HOME/.bash_aliases" ]; then
    pause_and_warn ".bash_aliases file exists. Renaming to .backup.bash_aliases" true
-   mv "$HOME/.bash_aliases" "$HOME/.backup.bash_aliases"
+   mv -v "$HOME/.bash_aliases" "$HOME/.backup.bash_aliases"
 fi
 
 inform "Downloading .bash_aliases..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/.bash_aliases
 
 inform "Installing .bash_aliases..."
-mv .bash_aliases "$HOME/"
+mv -v .bash_aliases "$HOME/"
 
 inform ".bash_aliases downloaded and installed to $HOME/.bash_aliases"
 
@@ -357,14 +357,14 @@ inform ".bash_aliases downloaded and installed to $HOME/.bash_aliases"
 #####################################################################################
 if [ -e "$HOME/.bashrc" ]; then
    pause_and_warn ".bashrc file exists. Renaming to .backup.bashrc" true
-   mv "$HOME/.bashrc" "$HOME/.backup.bashrc"
+   mv -v "$HOME/.bashrc" "$HOME/.backup.bashrc"
 fi
 
 inform "Downloading .bashrc..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/.bashrc
 
 inform "Installing .bashrc..."
-mv .bashrc "$HOME/"
+mv -v .bashrc "$HOME/"
 
 inform ".bashrc downloaded and installed to $HOME/.bashrc"
 
@@ -373,14 +373,14 @@ inform ".bashrc downloaded and installed to $HOME/.bashrc"
 #####################################################################################
 if [ -e "$HOME/.bash_profile" ]; then
    pause_and_warn ".bash_profile file exists. Renaming to .backup.bash_profile" true
-   mv "$HOME/.bash_profile" "$HOME/.backup.bash_profile"
+   mv -v "$HOME/.bash_profile" "$HOME/.backup.bash_profile"
 fi
 
 inform "Downloading .bash_profile..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/.bash_profile
 
 inform "Installing .bash_profile..."
-mv .bash_profile "$HOME/"
+mv -v .bash_profile "$HOME/"
 
 inform ".bash_profile downloaded and installed to $HOME/.bash_profile"
 
@@ -414,10 +414,10 @@ else
    unzip Spectacle+1.2.zip
 
    inform "Installing Spectacle into Applications..."
-   mv Spectacle.app /Applications
+   mv -v Spectacle.app /Applications
 
    inform "Removing Spectacle’s .zip file..."
-   rm Spectacle+1.2.zip
+   rm -f Spectacle+1.2.zip
 
    inform "Launching Spectacle..." true
    open /Applications/Spectacle.app
@@ -431,7 +431,7 @@ else
    curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/Shortcuts.json
 
    inform "Installing custom Spectacle shortcuts..."
-   mv Shortcuts.json ~/Library/Application\ Support/Spectacle/
+   mv -v Shortcuts.json ~/Library/Application\ Support/Spectacle/
 
    pause_and_warn "Restart Spectacle."
 fi
@@ -448,7 +448,7 @@ inform "Downloading Atom’s config.cson..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/atom/config.cson
 
 inform "Installing Atom’s config.cson..."
-mv config.cson "$HOME/.atom/"
+mv -v config.cson "$HOME/.atom/"
 
 inform "Installing Atom packages..."
 if [[ $(apm install) ]]; then
