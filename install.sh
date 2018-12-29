@@ -217,8 +217,9 @@ else
    pause_and_warn
 
    diskutil eject /Volumes/Typora/
-   rm Typora.dmg
 
+   inform "Removing Typora Disc Image..." true
+   rm -f Typora.dmg
 
 fi
 
