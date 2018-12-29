@@ -218,7 +218,6 @@ else
 
    diskutil eject /Volumes/Typora/
    rm Typora.dmg
-   inform "Typora’s installer image ejected and its installer removed."
 
 
 fi
@@ -239,7 +238,6 @@ else
    inform "Installing the IBM Plex Mono typeface into Font Book..."
    mv IBM_Plex_Mono/*.ttf "$HOME/Library/Fonts/"
 
-   inform "Removing un-needed local folders and files related to IBM Plex Mono..."
    rm -fr IBM_Plex_Mono
 
    rm -fr IBM_Plex_Mono.zip
@@ -261,7 +259,6 @@ else
    inform "Installing the Ubuntu Mono typeface into Font Book..."
    mv -v Ubuntu_Mono/*.ttf "$HOME/Library/Fonts/"
 
-   inform "Removing un-needed local folders and files related to Ubuntu Mono..."
    rm -fr Ubuntu_Mono
 
    rm -fr Ubuntu_Mono.zip
