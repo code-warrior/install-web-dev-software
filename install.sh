@@ -457,9 +457,11 @@ fi
 # Install Atom packages and config.cson.
 #####################################################################################
 if [ -e "$HOME/.atom/config.cson" ]; then
-   pause_and_warn "Atom’s config.cson file exists. Renaming to .atom/backup.config.cson" true
-   mv "$HOME/.atom/config.cson" "$HOME/.atom/backup.config.cson"
+   inform  "Atom’s config.cson file exists." true
+   pause_and_warn
 
+   inform "Renaming config.cson to .atom/backup.config.cson..."
+   mv -v "$HOME/.atom/config.cson" "$HOME/.atom/backup.config.cson"
 fi
 
 inform "Downloading Atom’s config.cson..."
