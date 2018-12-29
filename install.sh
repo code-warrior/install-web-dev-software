@@ -207,15 +207,20 @@ if [ -d "/Applications/Typora.app/" ]; then
 else
    inform "Downloading Typora..."
    curl -O https://typora.io/download/Typora.dmg
+
    inform "Installing Typora..."
    open Typora.dmg
+
    inform "The Finder should have loaded the Typora image. Copy Typora " true
    inform "to the Applications folder. Wait until the copy is finished before "
    inform "proceeding."
    pause_and_warn
+
    diskutil eject /Volumes/Typora/
    rm Typora.dmg
    inform "Typora’s installer image ejected and its installer removed."
+
+
 fi
 
 #####################################################################################
@@ -236,6 +241,7 @@ else
 
    inform "Removing un-needed local folders and files related to IBM Plex Mono..."
    rm -fr IBM_Plex_Mono
+
    rm -fr IBM_Plex_Mono.zip
 fi
 
@@ -257,6 +263,7 @@ else
 
    inform "Removing un-needed local folders and files related to Ubuntu Mono..."
    rm -fr Ubuntu_Mono
+
    rm -fr Ubuntu_Mono.zip
 fi
 
@@ -448,6 +455,7 @@ fi
 if [ -e "$HOME/.atom/config.cson" ]; then
    pause_and_warn "Atom’s config.cson file exists. Renaming to .atom/backup.config.cson" true
    mv "$HOME/.atom/config.cson" "$HOME/.atom/backup.config.cson"
+
 fi
 
 inform "Downloading Atom’s config.cson..."
