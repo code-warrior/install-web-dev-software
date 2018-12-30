@@ -165,7 +165,7 @@ case $OS_VERSION in
 esac
 
 #####################################################################################
-# Check for Command Line Tools based on OS versions
+# Check for Command Line Tools based on OS version
 #####################################################################################
 if [ -n "$(pkgutil --pkgs=com.apple.pkg.$cmdline_version)" ]; then
   show "Command Line Tools are installed!"
@@ -189,7 +189,7 @@ inform "reveals IP address, hostname, and OS version."
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 #####################################################################################
-# Only use UTF-8 in Terminal.app
+# Only use UTF-8 in The Terminal
 #####################################################################################
 inform "Setting OS option that accepts UTF-8 as input in The Terminal." true
 sudo defaults write com.apple.terminal StringEncodings -array 4
