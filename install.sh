@@ -114,17 +114,23 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 inform "Setting OS option that accepts UTF-8 as input in The Terminal." true
 sudo defaults write com.apple.terminal StringEncodings -array 4
 
+#####################################################################################
 # Install typefaces
+#####################################################################################
 source ./includes/installer/install-font--ibm-plex-mono.sh
 source ./includes/installer/install-font--ubuntu-mono.sh
 
 source ./includes/installer/install-editorconfig.sh
 
+#####################################################################################
 # Install linters
+#####################################################################################
 source ./includes/installer/install-stylelintrc.json.sh
 source ./includes/installer/install-sass-lint.yml.sh
 
+#####################################################################################
 # Install Terminal environment
+#####################################################################################
 source ./includes/installer/install-git-prompt.sh
 source ./includes/installer/install-git-completion.sh
 source ./includes/installer/install-bash-aliases.sh
