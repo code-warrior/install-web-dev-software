@@ -1,4 +1,3 @@
-#@IgnoreInspection BashAddShebang
 # Reset formatting
 RESET=$(tput sgr0)
 
