@@ -117,33 +117,33 @@ sudo defaults write com.apple.terminal StringEncodings -array 4
 #####################################################################################
 # Install typefaces
 #####################################################################################
-source ./includes/installer/install-font--ibm-plex-mono.sh
-source ./includes/installer/install-font--ubuntu-mono.sh
+source ./includes/install/install-font--ibm-plex-mono.sh
+source ./includes/install/install-font--ubuntu-mono.sh
 
-source ./includes/installer/install-editorconfig.sh
+source ./includes/install/install-editorconfig.sh
 
 #####################################################################################
 # Install linters
 #####################################################################################
-source ./includes/installer/install-stylelintrc.json.sh
-source ./includes/installer/install-sass-lint.yml.sh
+source ./includes/install/install-stylelintrc.json.sh
+source ./includes/install/install-sass-lint.yml.sh
 
 #####################################################################################
 # Install Terminal environment
 #####################################################################################
-source ./includes/installer/install-git-prompt.sh
-source ./includes/installer/install-git-completion.sh
-source ./includes/installer/install-bash-aliases.sh
-source ./includes/installer/install-bashrc.sh
-source ./includes/installer/install-bash-profile.sh
-source ./includes/installer/install-terminal-theme--tomorrow-night.sh
+source ./includes/install/install-git-prompt.sh
+source ./includes/install/install-git-completion.sh
+source ./includes/install/install-bash-aliases.sh
+source ./includes/install/install-bashrc.sh
+source ./includes/install/install-bash-profile.sh
+source ./includes/install/install-terminal-theme--tomorrow-night.sh
 
 #####################################################################################
 # Install software
 #####################################################################################
-source ./includes/installer/install-spectacle.sh
-source ./includes/installer/install-typora.sh
-source ./includes/installer/install-github-desktop.sh
-source ./includes/installer/install-atom.sh
+source ./includes/install/install-spectacle.sh
+source ./includes/install/install-typora.sh
+source ./includes/install/install-github-desktop.sh
+source ./includes/install/install-atom.sh
 
 inform "This script is complete. Please restart The Terminal."

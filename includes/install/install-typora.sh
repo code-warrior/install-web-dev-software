@@ -22,5 +22,5 @@ else
    inform "Removing Typora Disc Image..." true
    rm -f Typora.dmg
 
-   inform "Typora’s installer image ejected and its installer removed." true
+   inform "Typora’s install image ejected and its install removed." true
 fi
