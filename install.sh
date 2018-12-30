@@ -114,7 +114,7 @@ inform "fail or warn you."
 pause_and_warn
 
 #####################################################################################
-# Check if current user is admin.
+# Check if current user is admin
 #####################################################################################
 if echo "$USER_GRPS" | grep -q -w admin; then
   echo "" > /dev/null
@@ -157,7 +157,7 @@ case $OS_VERSION in
       cmdline_version="CLTools_Executables" ;; # Sierra
    *10.11*)
       cmdline_version="CLTools_Executables"    # El Capitán
-      pause_and_warn "Outdated OS. Consider upgrading before continuing." true;; # El Capitán
+      pause_and_warn "Outdated OS. Consider upgrading before continuing." true;;
    *)
       fail "Sorry! You’ll have to upgrade your OS to $MINIMUM_MAC_OS or above." true;
 
@@ -195,7 +195,7 @@ inform "Setting OS option that accepts UTF-8 as input in The Terminal." true
 sudo defaults write com.apple.terminal StringEncodings -array 4
 
 #####################################################################################
-# Install the IBM Plex Mono typeface.
+# Install the IBM Plex Mono typeface
 #####################################################################################
 if [ -e "$HOME/Library/Fonts/IBMPlexMono-Regular.ttf" ]; then
    inform "IBM Plex Mono Regular is already installed." true
@@ -218,7 +218,7 @@ else
 fi
 
 #####################################################################################
-# Install the Ubunutu Mono typeface.
+# Install the Ubunutu Mono typeface
 #####################################################################################
 if [ -e "$HOME/Library/Fonts/UbuntuMono-Regular.ttf" ]; then
    inform "Ubuntu Mono Regular is already installed." true
@@ -241,7 +241,7 @@ else
 fi
 
 #####################################################################################
-# Install .editorconfig file.
+# Install .editorconfig file
 #####################################################################################
 if [ -e "$HOME/.editorconfig" ]; then
    pause_and_warn ".editorconfig file exists. Renaming to .backup.editorconfig" true
@@ -257,7 +257,7 @@ mv -v .editorconfig "$HOME/"
 inform ".editorconfig downloaded and installed to $HOME/.editorconfig"
 
 #####################################################################################
-# Install .stylelintrc.json file.
+# Install .stylelintrc.json file
 #####################################################################################
 if [ -e "$HOME/.stylelintrc.json" ]; then
    pause_and_warn ".stylelintrc.json file exists. Renaming to .backup.stylelintrc.json" true
@@ -273,7 +273,7 @@ mv -v .stylelintrc.json "$HOME/"
 inform ".stylelintrc.json downloaded and installed to $HOME/.stylelintrc.json"
 
 #####################################################################################
-# Install .sass-lint.yml file.
+# Install .sass-lint.yml file
 #####################################################################################
 if [ -e "$HOME/.sass-lint.yml" ]; then
    pause_and_warn ".sass-lint.yml file exists. Renaming to .backup.sass-lint.yml" true
@@ -289,7 +289,7 @@ mv -v .sass-lint.yml "$HOME/"
 inform ".sass-lint.yml downloaded and installed to $HOME/.sass-lint.yml"
 
 #####################################################################################
-# Install .git-prompt.sh file.
+# Install .git-prompt.sh file
 #####################################################################################
 if [ -e "$HOME/.git-prompt.sh" ]; then
    pause_and_warn ".git-prompt.sh file exists. Renaming to .backup.git-prompt.sh" true
@@ -305,7 +305,7 @@ mv -v .git-prompt.sh "$HOME/"
 inform ".git-prompt.sh downloaded and installed to $HOME/.git-prompt.sh"
 
 #####################################################################################
-# Install .git-completion.sh file.
+# Install .git-completion.sh file
 #####################################################################################
 if [ -e "$HOME/.git-completion.sh" ]; then
    pause_and_warn ".git-completion.sh file exists. Renaming to .backup.git-completion.sh" true
@@ -321,7 +321,7 @@ mv -v .git-completion.sh "$HOME/"
 inform ".git-completion.sh downloaded and installed to $HOME/.git-completion.sh"
 
 #####################################################################################
-# Install .bash_aliases file.
+# Install .bash_aliases file
 #####################################################################################
 if [ -e "$HOME/.bash_aliases" ]; then
    pause_and_warn ".bash_aliases file exists. Renaming to .backup.bash_aliases" true
@@ -337,7 +337,7 @@ mv -v .bash_aliases "$HOME/"
 inform ".bash_aliases downloaded and installed to $HOME/.bash_aliases"
 
 #####################################################################################
-# Install .bashrc file.
+# Install .bashrc file
 #####################################################################################
 if [ -e "$HOME/.bashrc" ]; then
    pause_and_warn ".bashrc file exists. Renaming to .backup.bashrc" true
@@ -353,7 +353,7 @@ mv -v .bashrc "$HOME/"
 inform ".bashrc downloaded and installed to $HOME/.bashrc"
 
 #####################################################################################
-# Install .bash_profile file.
+# Install .bash_profile file
 #####################################################################################
 if [ -e "$HOME/.bash_profile" ]; then
    pause_and_warn ".bash_profile file exists. Renaming to .backup.bash_profile" true
@@ -369,7 +369,7 @@ mv -v .bash_profile "$HOME/"
 inform ".bash_profile downloaded and installed to $HOME/.bash_profile"
 
 #####################################################################################
-# Install Tomorrow Night Terminal theme.
+# Install Tomorrow Night Terminal theme
 #####################################################################################
 inform "Downloading TomorrowNight.terminal..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/TomorrowNight.terminal
@@ -386,7 +386,7 @@ inform "Removing un-needed TomorrowNight.terminal file..."
 rm -f TomorrowNight.terminal
 
 #####################################################################################
-# Install Spectacle.
+# Install Spectacle
 #####################################################################################
 if [ -d "/Applications/Spectacle.app/" ]; then
    inform "Spectacle is already installed on this machine." true
@@ -423,7 +423,7 @@ else
 fi
 
 #####################################################################################
-# Install Typora for Markdown files, but first check if it is already installed.
+# Install Typora
 #####################################################################################
 if [ -d "/Applications/Typora.app/" ]; then
    inform "Typora is already installed on this machine." true
@@ -450,7 +450,7 @@ else
 fi
 
 #####################################################################################
-# Install GitHub Desktop.
+# Install GitHub Desktop
 #####################################################################################
 if [ -d "/Applications/GitHub Desktop.app/" ]; then
    inform "GitHub Desktop is already installed on this machine." true
@@ -473,7 +473,7 @@ else
 fi
 
 #####################################################################################
-# Install Atom.
+# Install Atom
 #####################################################################################
 if [ -d "/Applications/Atom.app/" ]; then
    inform "Atom is already installed on this machine." true
@@ -497,7 +497,7 @@ else
 fi
 
 #####################################################################################
-# Install Atom packages and config.cson.
+# Install Atom packages and config.cson
 #####################################################################################
 if [ -e "$HOME/.atom/config.cson" ]; then
    inform  "Atom’s config.cson file exists." true
