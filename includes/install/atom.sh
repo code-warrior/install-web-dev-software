@@ -16,10 +16,19 @@ else
    open "$ATOM_INSTALLER"
    pause_and_warn
 
-   inform "Removing atom-mac.zip..." true
-   rm -f atom-mac.zip
+   if [ -e "$ATOM_INSTALLER" ]; then
+      inform "Removing $ATOM_INSTALLER..." true
 
-   inform "Atom’s installer removed." true
+      rm -f "$ATOM_INSTALLER"
+
+      if [ -e "$ATOM_INSTALLER" ]; then
+         warn "Removing $ATOM_INSTALLER was not successful. Please remove manually." true
+      else
+         inform "Atom’s installer removed succesfully." true
+      fi
+   else
+      warn "$ATOM_INSTALLER does not exist. Thus, there’s nothing to remove. Continuing..."
+   fi
 fi
 
 #####################################################################################
