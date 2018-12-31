@@ -10,7 +10,8 @@ inform "Bring up The Terminal’s preferences by typing ⌘ + ,. Choose Profiles
 inform "which is the second tab on the top, then scroll all the way down along the "
 inform "left column until you find TomorrowNight. Click Default, then close the "
 inform "Profiles page."
-pause_and_warn "Once the theme is installed, come back to this Terminal window."
+
+pause_and_warn "Once the theme is installed, come back to this Terminal window." true
 
 inform "Removing un-needed TomorrowNight.terminal file..."
 rm -f TomorrowNight.terminal
