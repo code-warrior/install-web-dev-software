@@ -61,5 +61,3 @@ else
 
    exit 0
 fi
-
-inform "This script is complete. Please restart The Terminal."
