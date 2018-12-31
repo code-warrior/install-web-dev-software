@@ -18,5 +18,5 @@ else
    inform "Removing GitHubDesktop.zip..." true
    rm -f GitHubDesktop.zip
 
-   inform "GitHub Desktop’s install removed." true
+   inform "GitHub Desktop’s installer removed." true
 fi

@@ -19,7 +19,7 @@ else
    inform "Removing atom-mac.zip..." true
    rm -f atom-mac.zip
 
-   inform "Atom’s install removed." true
+   inform "Atom’s installer removed." true
 fi
 
 #####################################################################################
