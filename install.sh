@@ -146,4 +146,4 @@ source ./includes/install/typora.sh
 source ./includes/install/github-desktop.sh
 source ./includes/install/atom.sh
 
-inform "This script is complete. Please restart The Terminal."
+inform "This script is complete. Please restart The Terminal." true
