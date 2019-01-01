@@ -14,8 +14,19 @@ else
    inform "Installing Spectacle into Applications..."
    mv -v Spectacle.app /Applications
 
-   inform "Removing Spectacle’s .zip file..."
-   rm -f "$SPECTACLE_INSTALLER"
+   if [ -e "$SPECTACLE_INSTALLER" ]; then
+      inform "Removing $SPECTACLE_INSTALLER..."
+
+      rm -f "$SPECTACLE_INSTALLER"
+
+      if [ -e "$SPECTACLE_INSTALLER" ]; then
+         warn "Removing $SPECTACLE_INSTALLER was not successful. Please remove manually." true
+      else
+         inform "Spectacle’s installer removed successfully." true
+      fi
+   else
+      warn "$SPECTACLE_INSTALLER does not exist. Thus, there’s nothing to remove. Continuing..."
+   fi
 
    inform "Launching Spectacle..." true
    open /Applications/Spectacle.app
