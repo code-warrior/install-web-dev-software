@@ -27,3 +27,4 @@ MAC_ADDRS=$(ifconfig en0 | grep ether | sed -e 's/^[ \t|ether|\s|\n]*//')
 MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
 ATOM_INSTALLER="atom-mac.zip"
+ATOM_CONFIG="config.cson"

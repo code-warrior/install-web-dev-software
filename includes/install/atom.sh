@@ -34,18 +34,18 @@ fi
 #####################################################################################
 # Install Atom’s config.cson
 #####################################################################################
-if [ -e "$HOME/.atom/config.cson" ]; then
-   inform  "Atom’s config.cson file exists." true
+if [ -e "$HOME/.atom/$ATOM_CONFIG" ]; then
+   inform  "Atom’s $ATOM_CONFIG file exists." true
    pause_and_warn
 
    inform "Renaming config.cson to .atom/backup.config.cson..."
-   mv -v "$HOME/.atom/config.cson" "$HOME/.atom/backup.config.cson"
+   mv -v "$HOME/.atom/$ATOM_CONFIG" "$HOME/.atom/backup$ATOM_CONFIG"
 fi
 
-inform "Downloading Atom’s config.cson..."
+inform "Downloading Atom’s $ATOM_CONFIG..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/atom/config.cson
 
-inform "Installing Atom’s config.cson..."
+inform "Installing Atom’s $ATOM_CONFIG..."
 mv -v config.cson "$HOME/.atom/"
 
 #####################################################################################
