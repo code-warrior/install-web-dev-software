@@ -6,16 +6,16 @@ if [ -d "/Applications/Spectacle.app/" ]; then
    pause_and_warn
 else
    inform "Downloading Spectacle..."
-   curl -O https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.2.zip
+   curl -O https://s3.amazonaws.com/spectacle/downloads/"$SPECTACLE_INSTALLER"
 
    inform "Unzipping Spectacle..."
-   unzip Spectacle+1.2.zip
+   unzip "$SPECTACLE_INSTALLER"
 
    inform "Installing Spectacle into Applications..."
    mv -v Spectacle.app /Applications
 
    inform "Removing Spectacle’s .zip file..."
-   rm -f Spectacle+1.2.zip
+   rm -f "$SPECTACLE_INSTALLER"
 
    inform "Launching Spectacle..." true
    open /Applications/Spectacle.app

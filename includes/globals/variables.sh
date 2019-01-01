@@ -27,5 +27,6 @@ MAC_ADDRS=$(ifconfig en0 | grep ether | sed -e 's/^[ \t|ether|\s|\n]*//')
 MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
 ATOM_INSTALLER="atom-mac.zip"
+SPECTACLE_INSTALLER="Spectacle+1.2.zip"
 ATOM_CONFIG="config.cson"
 TYPORA_DISK_IMAGE="Typora.dmg"
