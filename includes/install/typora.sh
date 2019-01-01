@@ -16,11 +16,11 @@ else
    inform "proceeding."
    pause_and_warn
 
-   inform "Ejecting Typora Disc Image..." true
+   inform "Ejecting Typora disc image..." true
    diskutil eject /Volumes/Typora/
 
-   inform "Removing Typora Disc Image..." true
    rm -f Typora.dmg
+   inform "Removing Typora disc image..." true
 
    inform "Typora’s install image ejected and its install removed." true
 fi
