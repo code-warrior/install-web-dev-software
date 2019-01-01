@@ -63,10 +63,12 @@ if [ -n "$(apm install)" ]; then
    apm install emmet
    apm install linter-sass-lint
 else
-   fail "Atom’s package manager (APM) is not installed. Launch Atom, " true
-   fail "click Atom in the menu bar on the left, right next to the Apple icon,"
-   fail "then choose Install Shell Commands. "
-   fail "Close Atom, then restart this script. Exiting..." true
+   fail "Atom’s package manager (APM) is not installed." true
+   fail "1. Launch Atom."
+   fail "2. Click Atom in the menu bar on the left, next to the Apple icon."
+   fail "3. Choose Install Shell Commands."
+   fail "4. Close Atom."
+   fail "5. Restart this script." true
 
    exit 0
 fi
