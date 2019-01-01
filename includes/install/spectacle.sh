@@ -39,10 +39,10 @@ else
    pause_and_warn
 
    inform "Downloading custom Spectacle shortcuts..."
-   curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/Shortcuts.json
+   curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/"$SPECTACLE_SHORTCUTS_FILE"
 
    inform "Installing custom Spectacle shortcuts..."
-   mv -v Shortcuts.json ~/Library/Application\ Support/Spectacle/
+   mv -v "$SPECTACLE_SHORTCUTS_FILE" ~/Library/Application\ Support/Spectacle/
 
    pause_and_warn "Restart Spectacle."
 fi
