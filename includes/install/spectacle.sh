@@ -38,11 +38,16 @@ else
    warn "4. Lock the dialog box, then continue."
    pause_and_warn
 
-   inform "Downloading custom Spectacle shortcuts..."
+   inform "Downloading custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
    curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/"$SPECTACLE_SHORTCUTS_FILE"
 
-   inform "Installing custom Spectacle shortcuts..."
+   inform "Installing custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
    mv -v "$SPECTACLE_SHORTCUTS_FILE" ~/Library/Application\ Support/Spectacle/
 
-   pause_and_warn "Restart Spectacle."
+   if [ -e "$SPECTACLE_SHORTCUTS_FILE" ]; then
+      warn "The Spectacle shortcuts were not successfully installed. Please investigate, then continue."
+      pause_and_warn
+   else
+      inform "The Spectacle shortcuts were installed successfully."
+   fi
 fi
