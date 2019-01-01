@@ -31,10 +31,11 @@ else
    inform "Launching Spectacle..." true
    open /Applications/Spectacle.app
 
-   warn "If you’re running Spectacle for the first time, click Open System " true
-   warn "Preferences, unlock the lock in the lower left corner of Security "
-   warn "& Privacy (if it’s locked), and check the box to the left of the"
-   warn "Spectacle icon. Lock the dialog box, then continue."
+   warn "If you’re running Spectacle for the first time, do the following:" true
+   warn "1. Click Open System Preferences."
+   warn "2. Unlock the lock in the lower left corner of Security & Privacy, if it’s locked."
+   warn "3. Check the box to the left of the Spectacle icon."
+   warn "4. Lock the dialog box, then continue."
    pause_and_warn
 
    inform "Downloading custom Spectacle shortcuts..."
