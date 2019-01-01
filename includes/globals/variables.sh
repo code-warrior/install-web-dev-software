@@ -28,3 +28,4 @@ MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:
 
 ATOM_INSTALLER="atom-mac.zip"
 ATOM_CONFIG="config.cson"
+TYPORA_DISK_IMAGE="Typora.dmg"
