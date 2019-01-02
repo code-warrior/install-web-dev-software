@@ -134,8 +134,6 @@ sudo defaults write com.apple.terminal StringEncodings -array 4
 source ./includes/install/ibm-plex-mono.sh
 source ./includes/install/ubuntu-mono.sh
 
-source ./includes/install/editorconfig.sh
-
 #####################################################################################
 # Install linters
 #####################################################################################
@@ -151,6 +149,7 @@ source ./includes/install/bash-aliases.sh
 source ./includes/install/bashrc.sh
 source ./includes/install/bash-profile.sh
 source ./includes/install/tomorrow-night.sh
+source ./includes/install/editorconfig.sh
 
 #####################################################################################
 # Install software
