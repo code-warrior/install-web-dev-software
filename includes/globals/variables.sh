@@ -28,10 +28,10 @@ MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:
 
 ATOM_INSTALLER="atom-mac.zip"
 SPECTACLE_INSTALLER="Spectacle+1.2.zip"
+GITHUB_DESKTOP_INSTALLER="GitHubDesktop.zip"
 ATOM_CONFIG="config.cson"
 TYPORA_DISK_IMAGE="Typora.dmg"
 SPECTACLE_SHORTCUTS_FILE="Shortcuts.json"
 BASH_ALIASES=".bash_aliases"
 BASH_PROFILE=".bash_profile"
 BASH_RUN_COMMANDS=".bashrc"
-GITHUB_DESKTOP_INSTALLER="GitHubDesktop.zip"
