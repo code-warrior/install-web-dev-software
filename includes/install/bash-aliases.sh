@@ -12,4 +12,10 @@ curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/
 inform "Installing $ALIASES..."
 mv -v "$ALIASES" "$HOME/"
 
-inform "$ALIASES downloaded and installed to $HOME/$ALIASES"
+# If the file still exists at its current locations, the mv command didn’t work...
+if [ -e "$ALIASES" ]; then
+   warn "Installing $ALIASES was not successful. Please investigate, then continue."
+   pause_and_warn
+else
+   inform "The $ALIASES file was installed successfully."
+fi
