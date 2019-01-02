@@ -1,15 +1,15 @@
 #####################################################################################
 # Install .bash_aliases file
 #####################################################################################
-if [ -e "$HOME/.bash_aliases" ]; then
-   pause_and_warn ".bash_aliases file exists. Renaming to .backup.bash_aliases" true
-   mv -v "$HOME/.bash_aliases" "$HOME/.backup.bash_aliases"
+if [ -e "$HOME/$ALIASES" ]; then
+   pause_and_warn "$ALIASES file exists. Renaming to .backup$ALIASES" true
+   mv -v "$HOME/$ALIASES" "$HOME/.backup$ALIASES"
 fi
 
-inform "Downloading .bash_aliases..."
-curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/.bash_aliases
+inform "Downloading $ALIASES..."
+curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$ALIASES"
 
-inform "Installing .bash_aliases..."
-mv -v .bash_aliases "$HOME/"
+inform "Installing $ALIASES..."
+mv -v "$ALIASES" "$HOME/"
 
-inform ".bash_aliases downloaded and installed to $HOME/.bash_aliases"
+inform "$ALIASES downloaded and installed to $HOME/$ALIASES"
