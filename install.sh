@@ -7,11 +7,19 @@
 # Set 256 color profile
 export TERM=xterm-256color
 
-source ./includes/globals/functions.sh
 if [ -e ./includes/globals/variables.sh ]; then
    source ./includes/globals/variables.sh
 else
    printf "The file variables.sh does not exist. This script requires it. Exiting...\n"
+
+   exit 1
+fi
+
+
+if [ -e ./includes/globals/functions.sh ]; then
+   source ./includes/globals/functions.sh
+else
+   printf "The file functions.sh does not exist. This script requires it. Exiting...\n"
 
    exit 1
 fi
