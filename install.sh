@@ -141,7 +141,7 @@ source ./includes/install/stylelintrc.json.sh
 source ./includes/install/sass-lint.yml.sh
 
 #####################################################################################
-# Install Terminal environment
+# Install environment
 #####################################################################################
 source ./includes/install/git-prompt.sh
 source ./includes/install/git-completion.sh
