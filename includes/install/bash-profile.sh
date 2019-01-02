@@ -12,4 +12,9 @@ curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/
 inform "Installing $BASH_PROFILE..."
 mv -v "$BASH_PROFILE" "$HOME/"
 
-inform "$BASH_PROFILE downloaded and installed to $HOME/$BASH_PROFILE"
+if [ -e "$BASH_PROFILE" ]; then
+   warn "Installing $BASH_PROFILE was not successful. Please investigate, then continue."
+   pause_and_warn
+else
+   inform "The $BASH_PROFILE file was installed successfully."
+fi
