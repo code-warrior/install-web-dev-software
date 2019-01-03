@@ -16,7 +16,7 @@ if [ -e "$BASH_RUN_COMMANDS" ]; then
     mv -v "$BASH_RUN_COMMANDS" "$HOME/"
 
     if [ -e "$BASH_RUN_COMMANDS" ]; then
-        warn "Installing $BASH_RUN_COMMANDS was not successful. Please investigate, the continue."
+        warn "$BASH_RUN_COMMANDS was not successfully installed. Please investigate, then continue."
         pause_and_warn
     else
         inform "The $BASH_RUN_COMMANDS was installed successfully."
