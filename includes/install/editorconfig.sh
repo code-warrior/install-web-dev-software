@@ -9,7 +9,16 @@ fi
 inform "Downloading $EDITOR_CONFIG_SETTINGS..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/"$EDITOR_CONFIG_SETTINGS"
 
-inform "Installing $EDITOR_CONFIG_SETTINGS..."
-mv -v "$EDITOR_CONFIG_SETTINGS" "$HOME/"
+if [ -e "$EDITOR_CONFIG_SETTINGS" ]; then
+    inform "$EDITOR_CONFIG_SETTINGS downloaded successfully."
 
-inform "$EDITOR_CONFIG_SETTINGS downloaded and installed to $HOME/$EDITOR_CONFIG_SETTINGS"
+    inform "Installing $EDITOR_CONFIG_SETTINGS..."
+    mv -v "$EDITOR_CONFIG_SETTINGS" "$HOME/"
+
+    if [ -e "$EDITOR_CONFIG_SETTINGS" ]; then
+        warn "$EDITOR_CONFIG_SETTINGS was not successful installed. Please investigate, the continue."
+        pause_and_warn
+    else
+        inform "$EDITOR_CONFIG_SETTINGS was installed successfully."
+    fi
+fi
