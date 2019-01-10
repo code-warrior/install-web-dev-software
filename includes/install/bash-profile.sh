@@ -1,5 +1,5 @@
 #####################################################################################
-# Install $BASH_PROFILE file
+# Install .bash_profile file
 #####################################################################################
 if [ -e "$HOME/$BASH_PROFILE" ]; then
    pause_and_warn "$BASH_PROFILE file exists. Renaming to .backup$BASH_PROFILE" true
@@ -13,8 +13,8 @@ inform "Installing $BASH_PROFILE..."
 mv -v "$BASH_PROFILE" "$HOME/"
 
 if [ -e "$BASH_PROFILE" ]; then
-   warn "Installing $BASH_PROFILE was not successful. Please investigate, then continue."
+   warn "$BASH_PROFILE was not successfully installed. Please investigate, then continue."
    pause_and_warn
 else
-   inform "The $BASH_PROFILE file was installed successfully."
+   inform "$BASH_PROFILE was installed successfully."
 fi
