@@ -19,6 +19,6 @@ if [ -e "$BASH_RUN_COMMANDS" ]; then
         warn "$BASH_RUN_COMMANDS was not successfully installed. Please investigate, then continue."
         pause_and_warn
     else
-        inform "The $BASH_RUN_COMMANDS was installed successfully."
+        inform "$BASH_RUN_COMMANDS was installed successfully."
     fi
 fi
