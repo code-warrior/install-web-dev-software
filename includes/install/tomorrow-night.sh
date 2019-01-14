@@ -1,10 +1,10 @@
 #####################################################################################
 # Install Tomorrow Night Terminal theme
 #####################################################################################
-inform "Downloading TomorrowNight.terminal..."
-curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/TomorrowNight.terminal
+inform "Downloading $TERMINAL_THEME..."
+curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$TERMINAL_THEME"
 
-open TomorrowNight.terminal
+open "$TERMINAL_THEME"
 
 inform "Bring up The Terminal’s preferences by typing ⌘ + ,. Choose Profiles, " true
 inform "which is the second tab on the top, then scroll all the way down along the "
@@ -13,5 +13,5 @@ inform "Profiles page."
 
 pause_and_warn "Once the theme is installed, come back to this Terminal window." true
 
-inform "Removing un-needed TomorrowNight.terminal file..."
-rm -f TomorrowNight.terminal
+inform "Removing un-needed $TERMINAL_THEME file..."
+rm -f "$TERMINAL_THEME"
