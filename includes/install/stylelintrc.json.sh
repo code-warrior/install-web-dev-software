@@ -1,7 +1,7 @@
 #####################################################################################
 # Install .stylelintrc.json file
 #####################################################################################
-if [ -e "$HOME/.stylelintrc.json" ]; then
+if [[ -e "$HOME/.stylelintrc.json" ]]; then
    pause_and_warn ".stylelintrc.json file exists. Renaming to .backup.stylelintrc.json" true
    mv -v "$HOME/.stylelintrc.json" "$HOME/.backup.stylelintrc.json"
 fi

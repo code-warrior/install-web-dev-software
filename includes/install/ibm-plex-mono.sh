@@ -1,7 +1,7 @@
 #####################################################################################
 # Install the IBM Plex Mono typeface
 #####################################################################################
-if [ -e "$HOME/Library/Fonts/IBMPlexMono-Regular.ttf" ]; then
+if [[ -e "$HOME/Library/Fonts/IBMPlexMono-Regular.ttf" ]]; then
    inform "IBM Plex Mono Regular is already installed." true
    pause_and_warn
 else

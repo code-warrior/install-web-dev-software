@@ -1,7 +1,7 @@
 #####################################################################################
 # Install Spectacle
 #####################################################################################
-if [ -d "/Applications/Spectacle.app/" ]; then
+if [[ -d "/Applications/Spectacle.app/" ]]; then
    inform "Spectacle is already installed on this machine." true
    pause_and_warn
 else
@@ -14,12 +14,12 @@ else
    inform "Installing Spectacle into Applications..."
    mv -v Spectacle.app /Applications
 
-   if [ -e "$SPECTACLE_INSTALLER" ]; then
+   if [[ -e "$SPECTACLE_INSTALLER" ]]; then
       inform "Removing $SPECTACLE_INSTALLER..."
 
       rm -f "$SPECTACLE_INSTALLER"
 
-      if [ -e "$SPECTACLE_INSTALLER" ]; then
+      if [[ -e "$SPECTACLE_INSTALLER" ]]; then
          warn "Removing $SPECTACLE_INSTALLER was not successful. Please remove manually." true
       else
          inform "Spectacle’s installer removed successfully." true
@@ -44,7 +44,7 @@ else
    inform "Installing custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
    mv -v "$SPECTACLE_SHORTCUTS_FILE" ~/Library/Application\ Support/Spectacle/
 
-   if [ -e "$SPECTACLE_SHORTCUTS_FILE" ]; then
+   if [[ -e "$SPECTACLE_SHORTCUTS_FILE" ]]; then
       warn "The Spectacle shortcuts were not successfully installed. Please investigate, then continue."
       pause_and_warn
    else

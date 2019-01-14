@@ -1,7 +1,7 @@
 #####################################################################################
 # Install .bash_profile file
 #####################################################################################
-if [ -e "$HOME/$BASH_PROFILE" ]; then
+if [[ -e "$HOME/$BASH_PROFILE" ]]; then
    pause_and_warn "$BASH_PROFILE file exists. Renaming to .backup$BASH_PROFILE" true
    mv -v "$HOME/$BASH_PROFILE" "$HOME/.backup$BASH_PROFILE"
 fi
@@ -12,7 +12,7 @@ curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/
 inform "Installing $BASH_PROFILE..."
 mv -v "$BASH_PROFILE" "$HOME/"
 
-if [ -e "$BASH_PROFILE" ]; then
+if [[ -e "$BASH_PROFILE" ]]; then
    warn "$BASH_PROFILE was not successfully installed. Please investigate, then continue."
    pause_and_warn
 else

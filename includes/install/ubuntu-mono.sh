@@ -1,7 +1,7 @@
 #####################################################################################
 # Install the Ubunutu Mono typeface
 #####################################################################################
-if [ -e "$HOME/Library/Fonts/UbuntuMono-Regular.ttf" ]; then
+if [[ -e "$HOME/Library/Fonts/UbuntuMono-Regular.ttf" ]]; then
    inform "Ubuntu Mono Regular is already installed." true
    pause_and_warn
 else

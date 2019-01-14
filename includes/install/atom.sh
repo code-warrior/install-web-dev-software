@@ -1,7 +1,7 @@
 #####################################################################################
 # Install Atom
 #####################################################################################
-if [ -d "/Applications/Atom.app/" ]; then
+if [[ -d "/Applications/Atom.app/" ]]; then
    inform "Atom is already installed on this machine." true
    pause_and_warn
 else
@@ -16,12 +16,12 @@ else
    open "$ATOM_INSTALLER"
    pause_and_warn
 
-   if [ -e "$ATOM_INSTALLER" ]; then
+   if [[ -e "$ATOM_INSTALLER" ]]; then
       inform "Removing $ATOM_INSTALLER..." true
 
       rm -f "$ATOM_INSTALLER"
 
-      if [ -e "$ATOM_INSTALLER" ]; then
+      if [[ -e "$ATOM_INSTALLER" ]]; then
          warn "Removing $ATOM_INSTALLER was not successful. Please remove manually." true
       else
          inform "Atom’s installer removed succesfully." true

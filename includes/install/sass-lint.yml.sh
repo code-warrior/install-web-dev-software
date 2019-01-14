@@ -1,7 +1,7 @@
 #####################################################################################
 # Install .sass-lint.yml file
 #####################################################################################
-if [ -e "$HOME/.sass-lint.yml" ]; then
+if [[ -e "$HOME/.sass-lint.yml" ]]; then
    pause_and_warn ".sass-lint.yml file exists. Renaming to .backup.sass-lint.yml" true
    mv -v "$HOME/.sass-lint.yml" "$HOME/.backup.sass-lint.yml"
 fi

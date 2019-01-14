@@ -1,7 +1,7 @@
 #####################################################################################
 # Install Typora
 #####################################################################################
-if [ -d "/Applications/Typora.app/" ]; then
+if [[ -d "/Applications/Typora.app/" ]]; then
    inform "Typora is already installed on this machine." true
    pause_and_warn
 else
@@ -22,7 +22,7 @@ else
    inform "Removing Typora disc image..." true
    rm -f "$TYPORA_DISK_IMAGE"
 
-   if [ -e "$TYPORA_DISK_IMAGE" ]; then
+   if [[ -e "$TYPORA_DISK_IMAGE" ]]; then
       warn "Removing $TYPORA_DISK_IMAGE was not successful, Please remove manually." true
    else
       inform "Typora’s disc image ejected and removed successfully." true

@@ -1,7 +1,7 @@
 #####################################################################################
 # Install .git-prompt.sh file
 #####################################################################################
-if [ -e "$HOME/$GIT_PROMPT" ]; then
+if [[ -e "$HOME/$GIT_PROMPT" ]]; then
    pause_and_warn "$GIT_PROMPT file exists. Renaming to .backup$GIT_PROMPT" true
    mv -v "$HOME/$GIT_PROMPT" "$HOME/.backup$GIT_PROMPT"
 fi
