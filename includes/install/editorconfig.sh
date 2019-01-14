@@ -16,7 +16,7 @@ if [ -e "$EDITOR_CONFIG_SETTINGS" ]; then
     mv -v "$EDITOR_CONFIG_SETTINGS" "$HOME/"
 
     if [ -e "$EDITOR_CONFIG_SETTINGS" ]; then
-        warn "$EDITOR_CONFIG_SETTINGS was not successful installed. Please investigate, the continue."
+        warn "$EDITOR_CONFIG_SETTINGS was not successful installed. Please investigate, then continue."
         pause_and_warn
     else
         inform "$EDITOR_CONFIG_SETTINGS was installed successfully."
