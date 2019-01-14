@@ -9,7 +9,16 @@ fi
 inform "Downloading $GIT_COMPLETION..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/"$GIT_COMPLETION"
 
-inform "Installing $GIT_COMPLETION..."
-mv -v "$GIT_COMPLETION" "$HOME/"
+if [ -e "$GIT_COMPLETION" ]; then
+    inform "$GIT_COMPLETION downloaded successfully."
 
-inform "$GIT_COMPLETION downloaded and installed to $HOME/$GIT_COMPLETION"
+    inform "Installing $GIT_COMPLETION..."
+    mv -v "$GIT_COMPLETION" "$HOME/"
+
+    if [ -e "$GIT_COMPLETION" ]; then
+        warn "$GIT_COMPLETION was not successful installed. Please investigate, then continue."
+        pause_and_warn
+    else
+        inform "$GIT_COMPLETION was installed successfully."
+    fi
+fi
