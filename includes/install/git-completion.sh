@@ -16,7 +16,7 @@ if [[ -e "$GIT_COMPLETION" ]]; then
     mv -v "$GIT_COMPLETION" "$HOME/"
 
     if [[ -e "$GIT_COMPLETION" ]]; then
-        warn "$GIT_COMPLETION was not successful installed. Please investigate, then continue."
+        warn "$GIT_COMPLETION was not successfully installed. Please investigate, then continue."
         pause_and_warn
     else
         inform "$GIT_COMPLETION was installed successfully."
