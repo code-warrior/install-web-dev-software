@@ -9,7 +9,16 @@ fi
 inform "Downloading $GIT_PROMPT..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/"$GIT_PROMPT"
 
-inform "Installing $GIT_PROMPT..."
-mv -v "$GIT_PROMPT" "$HOME/"
+if [[ -e "$GIT_PROMPT" ]]; then
+    inform "$GIT_PROMPT downloaded successfully."
 
-inform "$GIT_PROMPT downloaded and installed to $HOME/$GIT_PROMPT"
+    inform "Installing $GIT_PROMPT..."
+    mv -v "$GIT_PROMPT" "$HOME/"
+
+    if [[ -e "$GIT_PROMPT" ]]; then
+        warn "$GIT_PROMPT was not successfully installed. Please investigate, then continue."
+        pause_and_warn
+    else
+        inform "$GIT_PROMPT was installed successfully."
+    fi
+fi
