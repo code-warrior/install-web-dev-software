@@ -7,8 +7,7 @@ if [[ -e "$HOME/$GIT_PROMPT" ]]; then
 fi
 
 inform "Downloading $GIT_PROMPT..."
-curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and
--windows/"$GIT_PROMPT"
+curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/"$GIT_PROMPT"
 
 inform "Installing $GIT_PROMPT..."
 mv -v "$GIT_PROMPT" "$HOME/"
