@@ -34,7 +34,7 @@ fi
 #####################################################################################
 # Install Atom’s config.cson
 #####################################################################################
-if [ -e "$HOME/.atom/$ATOM_CONFIG" ]; then
+if [[ -e "$HOME/.atom/$ATOM_CONFIG" ]]; then
    inform  "Atom’s $ATOM_CONFIG file exists." true
    pause_and_warn
 
@@ -52,7 +52,7 @@ mv -v config.cson "$HOME/.atom/"
 # Install Atom packages
 #####################################################################################
 inform "Installing Atom packages..."
-if [ -n "$(apm install)" ]; then
+if [[ -n "$(apm install)" ]]; then
    apm install busy-signal
    apm install intentions
    apm install linter-ui-default
