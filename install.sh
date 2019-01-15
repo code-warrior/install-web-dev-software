@@ -51,23 +51,23 @@ pause_and_warn
 # Check if current user is admin
 #####################################################################################
 if echo "$USER_GRPS" | grep -q -w admin; then
-  echo "" > /dev/null
+   echo "" > /dev/null
 else
-  fail "The current user does not have administrator privileges. This " true
-  fail "program must be run by a user with admin privileges."
-  fail "Exiting..." true
+   fail "The current user does not have administrator privileges. This " true
+   fail "program must be run by a user with admin privileges."
+   fail "Exiting..." true
 
-  exit 1
+   exit 1
 fi
 
 if [ "$OS_NUMBER" -lt "11" ]; then
-  fail "This installation program was built and tested in macOS Mojave " true
-  fail "(10.14). It may not work in previous versions, especially those"
-  fail "from 2014 (10.10, Yosemite) or older. To be safe, exit this"
-  fail "installation, update to Mojave, then restart this program."
-  fail "Exiting..." true
+   fail "This installation program was built and tested in macOS Mojave " true
+   fail "(10.14). It may not work in previous versions, especially those"
+   fail "from 2014 (10.10, Yosemite) or older. To be safe, exit this"
+   fail "installation, update to Mojave, then restart this program."
+   fail "Exiting..." true
 
-  exit 1
+   exit 1
 fi
 
 #####################################################################################
@@ -102,14 +102,14 @@ esac
 # Check for Command Line Tools based on OS version
 #####################################################################################
 if [[ -n "$(pkgutil --pkgs=com.apple.pkg.$cmdline_version)" ]]; then
-  show "Command Line Tools are installed!"
+   show "Command Line Tools are installed!"
 else
-  fail "Command Line Tools are not installed!" true
-  fail "Running 'xcode-select --install' Please click Install!"
-  fail "After installing, please rerun this script." true
-  xcode-select --install
+   fail "Command Line Tools are not installed!" true
+   fail "Running 'xcode-select --install' Please click Install!"
+   fail "After installing, please rerun this script." true
+   xcode-select --install
 
-  exit 1
+   exit 1
 fi
 
 inform "Setting OS configurations..." true

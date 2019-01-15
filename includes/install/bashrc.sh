@@ -10,15 +10,15 @@ inform "Downloading $BASH_RUN_COMMANDS..."
 curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_RUN_COMMANDS"
 
 if [[ -e "$BASH_RUN_COMMANDS" ]]; then
-    inform "$BASH_RUN_COMMANDS downloaded successfully."
+   inform "$BASH_RUN_COMMANDS downloaded successfully."
 
-    inform "Installing $BASH_RUN_COMMANDS..."
-    mv -v "$BASH_RUN_COMMANDS" "$HOME/"
+   inform "Installing $BASH_RUN_COMMANDS..."
+   mv -v "$BASH_RUN_COMMANDS" "$HOME/"
 
-    if [[ -e "$BASH_RUN_COMMANDS" ]]; then
-        warn "$BASH_RUN_COMMANDS was not successfully installed. Please investigate, then continue."
-        pause_and_warn
-    else
-        inform "$BASH_RUN_COMMANDS was installed successfully."
-    fi
+   if [[ -e "$BASH_RUN_COMMANDS" ]]; then
+      warn "$BASH_RUN_COMMANDS was not successfully installed. Please investigate, then continue."
+      pause_and_warn
+   else
+      inform "$BASH_RUN_COMMANDS was installed successfully."
+   fi
 fi
