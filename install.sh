@@ -138,7 +138,24 @@ source ./includes/install/ubuntu-mono.sh
 # Install linters
 #####################################################################################
 source ./includes/install/stylelintrc.json.sh
-source ./includes/install/sass-lint.yml.sh
+
+while true
+do
+   read -p "Using Sass? (y)es, (n)o, or (q)uit. " sass_response
+
+   case $sass_response in
+      [yY]* )
+         source ./includes/install/sass-lint.yml.sh
+
+         break;;
+
+      [qQnN]* )
+         exit;;
+
+      * )
+         echo "Please choose. Using Sass? (y)es, (n)o, or (q)uit. ";;
+   esac
+done
 
 #####################################################################################
 # Install environment
