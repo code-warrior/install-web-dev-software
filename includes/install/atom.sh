@@ -97,11 +97,11 @@ if [[ -n "$(apm install)" ]]; then
    apm install linter-stylelint
    apm install emmet
 
-   if [[ $sass_response == 'y' || $sass_response == 'Y' ]]; then
+   if [[ $SASS_RESPONSE == 'y' || $SASS_RESPONSE == 'Y' ]]; then
       apm install linter-sass-lint
    fi
 
-   if [[ $eslint_response == 'y' || $eslint_response == 'Y' ]]; then
+   if [[ $ESLINT_RESPONSE == 'y' || $ESLINT_RESPONSE == 'Y' ]]; then
       apm install linter-eslint
    fi
 else

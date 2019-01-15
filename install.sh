@@ -141,9 +141,9 @@ source ./includes/install/stylelintrc.json.sh
 
 while true
 do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using Sass? (y)es or (n)o. ${RESET}"  -n 1 -r sass_response
+   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using Sass? (y)es or (n)o. ${RESET}"  -n 1 -r SASS_RESPONSE
 
-   case $sass_response in
+   case $SASS_RESPONSE in
       [yY]* )
          source ./includes/install/sass-lint.yml.sh
 
@@ -159,9 +159,9 @@ done
 
 while true
 do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using JavaScript? (y)es or (n)o. ${RESET}"  -n 1 -r eslint_response
+   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using JavaScript? (y)es or (n)o. ${RESET}"  -n 1 -r ESLINT_RESPONSE
 
-   case $eslint_response in
+   case $ESLINT_RESPONSE in
       [yY]* )
          source ./includes/install/eslintrc.json.sh
 
