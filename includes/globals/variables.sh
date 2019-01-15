@@ -30,8 +30,8 @@ export MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[
 
 export ATOM_INSTALLER="atom-mac.zip"
 export ATOM_CONFIG="config.cson"
-BASH_ALIAS=".bash_aliases"
-BASH_PFILE=".bash_profile"
+export BASH_ALIAS=".bash_aliases"
+export BASH_PFILE=".bash_profile"
 export BASH_RUN_COMMANDS=".bashrc"
 export EDITOR_CONFIG_SETTINGS=".editorconfig"
 export ESLINT_SETTINGS=".eslintrc.json"
