@@ -15,21 +15,35 @@ if [[ -e "$HOME/$BASH_ALIASES" ]]; then
       inform "Downloading $BASH_ALIASES..."
       curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_ALIASES"
 
-      inform "Installing $BASH_ALIASES..."
-      mv -v "$BASH_ALIASES" "$HOME/"
+      if [[ -e "$BASH_ALIASES" ]]; then
+         inform "$BASH_ALIASES downloaded successfully."
+
+         inform "Installing $BASH_ALIASES..."
+         mv -v "$BASH_ALIASES" "$HOME/"
+
+         if [[ -e "$BASH_ALIASES" ]]; then
+            warn "$BASH_ALIASES was not successfully installed. Please investigate, then continue."
+            pause_and_warn
+         else
+            inform "$BASH_ALIASES was installed successfully."
+         fi
+      fi
    fi
 else
    inform "Downloading $BASH_ALIASES..."
    curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_ALIASES"
 
-   inform "Installing $BASH_ALIASES..."
-   mv -v "$BASH_ALIASES" "$HOME/"
-fi
+   if [[ -e "$BASH_ALIASES" ]]; then
+      inform "$BASH_ALIASES downloaded successfully."
 
-# If .bash_aliases still exists at its current locations, then the mv command didn’t work...
-if [[ -e "$BASH_ALIASES" ]]; then
-   warn "Installing $BASH_ALIASES was not successful. Please investigate, then continue."
-   pause_and_warn
-else
-   inform "The $BASH_ALIASES file was installed successfully."
+      inform "Installing $BASH_ALIASES..."
+      mv -v "$BASH_ALIASES" "$HOME/"
+
+      if [[ -e "$BASH_ALIASES" ]]; then
+         warn "$BASH_ALIASES was not successfully installed. Please investigate, then continue."
+         pause_and_warn
+      else
+         inform "$BASH_ALIASES was installed successfully."
+      fi
+   fi
 fi
