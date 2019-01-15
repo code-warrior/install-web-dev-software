@@ -65,6 +65,10 @@ if [[ -n "$(apm install)" ]]; then
    if [[ $sass_response == 'y' || $sass_response == 'Y' ]]; then
       apm install linter-sass-lint
    fi
+
+   if [[ $eslint_response == 'y' || $eslint_response == 'Y' ]]; then
+      apm install linter-eslint
+   fi
 else
    fail "Atom’s package manager (APM) is not installed." true
    fail "1. Launch Atom."
