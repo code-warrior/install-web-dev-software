@@ -9,13 +9,13 @@ else
    curl "https://fonts.google.com/download?family=Ubuntu%20Mono" -o "$UBUNTU_MONO_INSTALLER"
 
    inform "Unzipping the Ubuntu Mono typeface into Font Book..."
-   unzip "$UBUNTU_MONO_INSTALLER" -d Ubuntu_Mono
+   unzip "$UBUNTU_MONO_INSTALLER" -d "$UBUNTU_MONO_FOLDER"
 
    inform "Installing the Ubuntu Mono typeface into Font Book..."
-   mv -v Ubuntu_Mono/*.ttf "$HOME/Library/Fonts/"
+   mv -v "$UBUNTU_MONO_FOLDER"/*.ttf "$HOME/Library/Fonts/"
 
    inform "Removing Ubuntu_Mono folder..." true
-   rm -fr Ubuntu_Mono
+   rm -fr "$UBUNTU_MONO_FOLDER"
 
    inform "Removing $UBUNTU_MONO_INSTALLER file..." true
    rm -fr "$UBUNTU_MONO_INSTALLER"
