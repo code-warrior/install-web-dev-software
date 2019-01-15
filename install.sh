@@ -195,4 +195,6 @@ source ./includes/install/typora.sh
 source ./includes/install/github-desktop.sh
 source ./includes/install/atom.sh
 
-inform "This script is complete. Please restart The Terminal and Spectacle." true
+inform "The installation is complete. " true
+inform "Open Spectacle’s Preferences pane and check off “Launch Spectacle at login” " true
+inform "Please restart The Terminal and Spectacle." true
