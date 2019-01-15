@@ -4,7 +4,7 @@
 if [[ -e "$HOME/$STYLELINT_SETTINGS" ]]; then
    if [[ -e "$HOME/.backup$STYLELINT_SETTINGS" ]]; then
       inform "$STYLELINT_SETTINGS and .backup$STYLELINT_SETTINGS exist." true
-      inform "Nothing to install. Continuining..."
+      inform "Nothing to install. Continuing..."
    else
       inform "$STYLELINT_SETTINGS file exists." true
       pause_and_warn
