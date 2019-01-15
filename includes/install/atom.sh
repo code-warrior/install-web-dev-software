@@ -24,7 +24,7 @@ else
       if [[ -e "$ATOM_INSTALLER" ]]; then
          warn "Removing $ATOM_INSTALLER was not successful. Please remove manually." true
       else
-         inform "Atom’s installer removed succesfully." true
+         inform "Atom’s installer removed successfully." true
       fi
    else
       warn "$ATOM_INSTALLER does not exist. Thus, there’s nothing to remove. Continuing..."
