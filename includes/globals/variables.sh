@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Reset formatting
 RESET=$(tput sgr0)
 

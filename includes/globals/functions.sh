@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function show () {
   echo -e "${BG_WHITE}${BLACK}> $* ${RESET}"
 }
