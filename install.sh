@@ -141,7 +141,7 @@ source ./includes/install/stylelintrc.json.sh
 
 while true
 do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using Sass? (y)es or (n)o. ${RESET}" sass_response
+   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using Sass? (y)es or (n)o. ${RESET}"  -n 1 -r sass_response
 
    case $sass_response in
       [yY]* )
@@ -153,13 +153,13 @@ do
          break;;
 
       * )
-         echo "Please choose. Using Sass? (y)es, (n)o, or (q)uit. ";;
+         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Using Sass? (y)es, (n)o, or (q)uit. ${RESET} ";;
    esac
 done
 
 while true
 do
-   read -p "Using JavaScript? (y)es or (n)o. " eslint_response
+   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using JavaScript? (y)es or (n)o. ${RESET}"  -n 1 -r eslint_response
 
    case $eslint_response in
       [yY]* )
