@@ -37,28 +37,50 @@ fi
 # Install Atom’s config.cson
 #####################################################################################
 if [[ -e "$HOME/.atom/$ATOM_CONFIG" ]]; then
-   if [[ -e "$HOME/.atom/backup.$ATOM_CONFIG" ]]; then
-      inform ".atom/$ATOM_CONFIG and .atom/backup.$ATOM_CONFIG exist." true
-      inform  "Nothing to install. Continuing..."
+   if [[ -e "$HOME/.atom/.backup.$ATOM_CONFIG" ]]; then
+      inform ".atom/$ATOM_CONFIG and .atom/.backup.$ATOM_CONFIG exist." true
+      inform "Nothing to install. Continuing..."
    else
-      inform  "Atom’s $ATOM_CONFIG file exists." true
+      inform "$ATOM_CONFIG file exists." true
       pause_and_warn
 
-      inform "Renaming $ATOM_CONFIG to .atom/backup.$ATOM_CONFIG..."
-      mv -v "$HOME/.atom/$ATOM_CONFIG" "$HOME/.atom/backup.$ATOM_CONFIG"
+      inform "Renaming to .atom/.backup.$ATOM_CONFIG..."
+      mv -v "$HOME/.atom/$ATOM_CONFIG" "$HOME/.atom/.backup.$ATOM_CONFIG"
 
-      inform "Downloading Atom’s $ATOM_CONFIG..."
-      curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/atom/config.cson
+      inform "Downloading $ATOM_CONFIG..."
+      curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/atom/"$ATOM_CONFIG"
 
-      inform "Installing Atom’s $ATOM_CONFIG..."
-      mv -v "$ATOM_CONFIG" "$HOME/.atom/"
+      if [[ -e "$ATOM_CONFIG" ]]; then
+         inform "$ATOM_CONFIG downloaded successfully."
+
+         inform "Installing $ATOM_CONFIG..."
+         mv -v "$ATOM_CONFIG" "$HOME/.atom/"
+
+         if [[ -e "$ATOM_CONFIG" ]]; then
+            warn "$ATOM_CONFIG was not successfully installed. Please investigate, then continue."
+            pause_and_warn
+         else
+            inform "$ATOM_CONFIG was installed successfully."
+         fi
+      fi
    fi
 else
-   inform "Downloading Atom’s $ATOM_CONFIG..."
-   curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/atom/config.cson
+   inform "Downloading $ATOM_CONFIG..."
+   curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/atom/"$ATOM_CONFIG"
 
-   inform "Installing Atom’s $ATOM_CONFIG..."
-   mv -v "$ATOM_CONFIG" "$HOME/.atom/"
+   if [[ -e "$ATOM_CONFIG" ]]; then
+      inform "$ATOM_CONFIG downloaded successfully."
+
+      inform "Installing $ATOM_CONFIG..."
+      mv -v "$ATOM_CONFIG" "$HOME/.atom/"
+
+      if [[ -e "$ATOM_CONFIG" ]]; then
+         warn "$ATOM_CONFIG was not successfully installed. Please investigate, then continue."
+         pause_and_warn
+      else
+         inform "$ATOM_CONFIG was installed successfully."
+      fi
+   fi
 fi
 
 #####################################################################################
