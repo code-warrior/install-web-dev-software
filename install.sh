@@ -7,7 +7,7 @@
 # Set 256 color profile
 export TERM=xterm-256color
 
-if [ -e ./includes/globals/variables.sh ]; then
+if [[ -e ./includes/globals/variables.sh ]]; then
    source ./includes/globals/variables.sh
 else
    printf "The file variables.sh does not exist. This script requires it. Exiting...\n"
@@ -16,7 +16,7 @@ else
 fi
 
 
-if [ -e ./includes/globals/functions.sh ]; then
+if [[ -e ./includes/globals/functions.sh ]]; then
    source ./includes/globals/functions.sh
 else
    printf "The file functions.sh does not exist. This script requires it. Exiting...\n"
@@ -60,7 +60,7 @@ else
    exit 1
 fi
 
-if [ "$OS_NUMBER" -lt "11" ]; then
+if [[ "$OS_NUMBER" -lt "11" ]]; then
    fail "This installation program was built and tested in macOS Mojave " true
    fail "(10.14). It may not work in previous versions, especially those"
    fail "from 2014 (10.10, Yosemite) or older. To be safe, exit this"
