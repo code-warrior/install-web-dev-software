@@ -36,7 +36,8 @@ fi
 #####################################################################################
 if [[ -e "$HOME/.atom/$ATOM_CONFIG" ]]; then
    if [[ -e "$HOME/.atom/backup.$ATOM_CONFIG" ]]; then
-      inform  "Atom’s ~/.atom/backup.$ATOM_CONFIG file exists. Continuing..." true
+      inform ".atom/$ATOM_CONFIG and .atom/backup.$ATOM_CONFIG exist." true
+      inform  "Nothing to install. Continuing..."
    else
       inform  "Atom’s $ATOM_CONFIG file exists." true
       pause_and_warn
