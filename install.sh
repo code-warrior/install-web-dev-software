@@ -157,6 +157,25 @@ do
    esac
 done
 
+while true
+do
+   read -p "Using JavaScript? (y)es, (n)o, or (q)uit. " eslint_response
+
+   case $eslint_response in
+      [yY]* )
+         source ./includes/install/eslintrc.json.sh
+
+         break;;
+
+      [qQnN]* )
+         exit;;
+
+      * )
+         echo "Please choose. Using JavaScript? (y)es, (n)o, or (q)uit. ";;
+   esac
+done
+
+
 #####################################################################################
 # Install environment
 #####################################################################################
