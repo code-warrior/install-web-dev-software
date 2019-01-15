@@ -141,7 +141,7 @@ source ./includes/install/stylelintrc.json.sh
 
 while true
 do
-   read -p "Using Sass? (y)es, (n)o, or (q)uit. " sass_response
+   read -p "Using Sass? (y)es or (n)o. " sass_response
 
    case $sass_response in
       [yY]* )
@@ -149,8 +149,8 @@ do
 
          break;;
 
-      [qQnN]* )
-         exit;;
+      [nN]* )
+         break;;
 
       * )
          echo "Please choose. Using Sass? (y)es, (n)o, or (q)uit. ";;
@@ -159,7 +159,7 @@ done
 
 while true
 do
-   read -p "Using JavaScript? (y)es, (n)o, or (q)uit. " eslint_response
+   read -p "Using JavaScript? (y)es or (n)o. " eslint_response
 
    case $eslint_response in
       [yY]* )
@@ -167,8 +167,8 @@ do
 
          break;;
 
-      [qQnN]* )
-         exit;;
+      [nN]* )
+         break;;
 
       * )
          echo "Please choose. Using JavaScript? (y)es, (n)o, or (q)uit. ";;
