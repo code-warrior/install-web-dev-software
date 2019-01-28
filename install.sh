@@ -175,7 +175,6 @@ do
    esac
 done
 
-
 #####################################################################################
 # Install environment
 #####################################################################################
@@ -190,6 +189,24 @@ source ./includes/install/editorconfig.sh
 #####################################################################################
 # Install software
 #####################################################################################
+while true
+do
+   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using FileZilla? (y)es or (n)o. ${RESET}"  -n 1 -r FILEZILLA_RESPONSE
+
+   case $FILEZILLA_RESPONSE in
+      [yY]* )
+         source ./includes/install/filezilla.sh
+
+         break;;
+
+      [nN]* )
+         break;;
+
+      * )
+         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Using FileZilla? (y)es, (n)o, or (q)uit. ${RESET} ";;
+   esac
+done
+
 source ./includes/install/filezilla.sh
 source ./includes/install/spectacle.sh
 source ./includes/install/typora.sh
