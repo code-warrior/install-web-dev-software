@@ -131,8 +131,8 @@ sudo defaults write com.apple.terminal StringEncodings -array 4
 #####################################################################################
 # Install typefaces
 #####################################################################################
-source ./includes/install/ubuntu-mono.sh
 install_typeface "/Library/Fonts/IBMPlexMono-Regular.ttf" "IBM Plex Mono" "https://fonts.google.com/download?family=IBM%20Plex%20Mono" "$IBM_PLEX_MONO_INSTALLER" "$IBM_PLEX_MONO_FOLDER"
+install_typeface "/Library/Fonts/UbuntuMono-Regular.ttf" "Ubuntu Mono" "https://fonts.google.com/download?family=Ubuntu%20Mono" "$UBUNTU_MONO_INSTALLER" "$UBUNTU_MONO_FOLDER"
 
 #####################################################################################
 # Install linters
