@@ -131,13 +131,13 @@ sudo defaults write com.apple.terminal StringEncodings -array 4
 #####################################################################################
 # Install typefaces
 #####################################################################################
-source ./includes/install/ibm-plex-mono.sh
-source ./includes/install/ubuntu-mono.sh
+install_typeface "/Library/Fonts/IBMPlexMono-Regular.ttf" "IBM Plex Mono" "https://fonts.google.com/download?family=IBM%20Plex%20Mono" "$IBM_PLEX_MONO_INSTALLER" "$IBM_PLEX_MONO_FOLDER"
+install_typeface "/Library/Fonts/UbuntuMono-Regular.ttf" "Ubuntu Mono" "https://fonts.google.com/download?family=Ubuntu%20Mono" "$UBUNTU_MONO_INSTALLER" "$UBUNTU_MONO_FOLDER"
 
 #####################################################################################
 # Install linters
 #####################################################################################
-source ./includes/install/stylelintrc.json.sh
+install_configuration_file "$STYLELINT_SETTINGS" https://gist.githubusercontent.com/code-warrior/a766f7c32bab9a82b467601800b00a46/raw/768717143df9db9c593dabb38c3c7aa63c87f66b/"$STYLELINT_SETTINGS"
 
 while true
 do
@@ -145,7 +145,7 @@ do
 
    case $SASS_RESPONSE in
       [yY]* )
-         source ./includes/install/sass-lint.yml.sh
+         install_configuration_file "$SASS_LINT_SETTINGS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/sass/"$SASS_LINT_SETTINGS"
 
          break;;
 
@@ -163,7 +163,7 @@ do
 
    case $ESLINT_RESPONSE in
       [yY]* )
-         source ./includes/install/eslintrc.json.sh
+         install_configuration_file "$ESLINT_SETTINGS" https://gist.githubusercontent.com/code-warrior/c6f1b02730b6a7d08c241f5bf1b62258/raw/2cdf414c31785847889697c67a7bd4bbad35393c/"$ESLINT_SETTINGS"
 
          break;;
 
@@ -178,13 +178,13 @@ done
 #####################################################################################
 # Install environment
 #####################################################################################
-source ./includes/install/git-prompt.sh
-source ./includes/install/git-completion.sh
-source ./includes/install/bash-aliases.sh
-source ./includes/install/bashrc.sh
-source ./includes/install/bash-profile.sh
+install_configuration_file "$GIT_PROMPT" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/"$GIT_PROMPT"
+install_configuration_file "$GIT_COMPLETION" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/"$GIT_COMPLETION"
+install_configuration_file "$BASH_ALIAS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_ALIAS"
+install_configuration_file "$BASH_RUN_COMMANDS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_RUN_COMMANDS"
+install_configuration_file "$BASH_PFILE" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_PFILE"
+install_configuration_file "$EDITOR_CONFIG_SETTINGS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/"$EDITOR_CONFIG_SETTINGS"
 source ./includes/install/tomorrow-night.sh
-source ./includes/install/editorconfig.sh
 
 #####################################################################################
 # Install software
