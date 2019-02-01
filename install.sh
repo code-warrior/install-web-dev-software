@@ -207,7 +207,6 @@ do
    esac
 done
 
-source ./includes/install/filezilla.sh
 source ./includes/install/spectacle.sh
 source ./includes/install/typora.sh
 source ./includes/install/github-desktop.sh
