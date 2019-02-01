@@ -180,7 +180,6 @@ done
 #####################################################################################
 source ./includes/install/git-prompt.sh
 source ./includes/install/git-completion.sh
-source ./includes/install/bash-aliases.sh
 source ./includes/install/bashrc.sh
 source ./includes/install/bash-profile.sh
 source ./includes/install/tomorrow-night.sh
