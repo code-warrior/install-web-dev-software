@@ -137,7 +137,7 @@ source ./includes/install/ubuntu-mono.sh
 #####################################################################################
 # Install linters
 #####################################################################################
-source ./includes/install/stylelintrc.json.sh
+install_configuration_file "$STYLELINT_SETTINGS" https://gist.githubusercontent.com/code-warrior/a766f7c32bab9a82b467601800b00a46/raw/768717143df9db9c593dabb38c3c7aa63c87f66b/"$STYLELINT_SETTINGS"
 
 while true
 do
