@@ -163,7 +163,7 @@ do
 
    case $ESLINT_RESPONSE in
       [yY]* )
-         source ./includes/install/eslintrc.json.sh
+         install_configuration_file "$ESLINT_SETTINGS" https://gist.githubusercontent.com/code-warrior/c6f1b02730b6a7d08c241f5bf1b62258/raw/2cdf414c31785847889697c67a7bd4bbad35393c/"$ESLINT_SETTINGS"
 
          break;;
 
