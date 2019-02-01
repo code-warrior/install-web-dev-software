@@ -180,6 +180,7 @@ done
 #####################################################################################
 source ./includes/install/git-prompt.sh
 source ./includes/install/git-completion.sh
+install_configuration_file "$BASH_ALIAS" https://raw.githubusercontent.com/code-warrior/punctuation-spaces/master/"$BASH_ALIAS"
 source ./includes/install/bashrc.sh
 source ./includes/install/bash-profile.sh
 source ./includes/install/tomorrow-night.sh
