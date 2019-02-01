@@ -183,8 +183,8 @@ install_configuration_file "$GIT_COMPLETION" https://raw.githubusercontent.com/c
 install_configuration_file "$BASH_ALIAS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_ALIAS"
 install_configuration_file "$BASH_RUN_COMMANDS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_RUN_COMMANDS"
 install_configuration_file "$BASH_PFILE" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_PFILE"
+install_configuration_file "$EDITOR_CONFIG_SETTINGS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/"$EDITOR_CONFIG_SETTINGS"
 source ./includes/install/tomorrow-night.sh
-source ./includes/install/editorconfig.sh
 
 #####################################################################################
 # Install software
