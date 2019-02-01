@@ -181,8 +181,8 @@ done
 install_configuration_file "$GIT_PROMPT" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/"$GIT_PROMPT"
 install_configuration_file "$GIT_COMPLETION" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/git-env-for-mac-and-windows/"$GIT_COMPLETION"
 install_configuration_file "$BASH_ALIAS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_ALIAS"
-source ./includes/install/bashrc.sh
 source ./includes/install/bash-profile.sh
+install_configuration_file "$BASH_RUN_COMMANDS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/terminal/mac/"$BASH_RUN_COMMANDS"
 source ./includes/install/tomorrow-night.sh
 source ./includes/install/editorconfig.sh
 
