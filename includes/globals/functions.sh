@@ -103,3 +103,25 @@ function install_configuration_file() {
       fi
    fi
 }
+
+function install_typeface () {
+   if [[ -e "$HOME$1" ]]; then
+      inform "$2 is already installed." true
+      pause_and_warn
+   else
+      inform "Downloading the $2 typeface..."
+      curl $3 -o "$4"
+
+      inform "Unzipping the $2 typeface..."
+      unzip "$4" -d "$5"
+
+      inform "Installing the $2 typeface into Font Book..."
+      mv "$5"/*.ttf "$HOME/Library/Fonts/"
+
+      inform "Removing un-needed $5..." true
+      rm -fr "$5"
+
+      inform "Removing un-needed $4 file..." true
+      rm -fr "$4"
+   fi
+}
