@@ -145,7 +145,7 @@ do
 
    case $SASS_RESPONSE in
       [yY]* )
-         source ./includes/install/sass-lint.yml.sh
+         install_configuration_file "$SASS_LINT_SETTINGS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/sass/"$SASS_LINT_SETTINGS"
 
          break;;
 
