@@ -24,12 +24,12 @@ else
    exit 1
 fi
 
-show "This script will install, update, and configure files and applications "
-show "that you will use in any HTML/CSS/JavaScript class that you take with me."
+show "This script will install, update, and/or configure files and applications "
+show "that you will use in Web Design at RISD."
 
 inform "Enter your computer’s password so that this script can make the " true
 inform "necessary changes to your system. For security purposes, Mac OS "
-inform "will not echo to The Terminal the password as you type: "
+inform "will not echo your password to The Terminal as you type: "
 
 sudo -p "Password:" echo "${BG_WHITE}> Thank you! ${RESET}"
 
@@ -62,7 +62,7 @@ fi
 
 if [[ "$OS_NUMBER" -lt "11" ]]; then
    fail "This installation program was built and tested in macOS Mojave " true
-   fail "(10.14). It may not work in previous versions, especially those"
+   fail "(10.14.x). It may not work in previous versions, especially those"
    fail "from 2014 (10.10, Yosemite) or older. To be safe, exit this"
    fail "installation, update to Mojave, then restart this program."
    fail "Exiting..." true
@@ -73,9 +73,9 @@ fi
 #####################################################################################
 # Check for recommended software updates
 #####################################################################################
-inform "Running software update on Mac OS... " true
+inform "Running software update on macOS... " true
 sudo softwareupdate -i -r --ignore iTunes > /dev/null 2>&1
-show "Software updated!"
+show "Software update program has been run."
 
 #####################################################################################
 # Check that command line tools are installed
@@ -93,7 +93,7 @@ case $OS_VERSION in
       cmdline_version="CLTools_Executables"    # El Capitán
       pause_and_warn "Outdated OS. Consider upgrading before continuing." true;;
    *)
-      fail "Sorry! You’ll have to upgrade your OS to $MINIMUM_MAC_OS or above." true;
+      fail "Sorry! You’ll have to upgrade your OS to $MINIMUM_MAC_OS or above to continue." true;
 
       exit 1;;
 esac
