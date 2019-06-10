@@ -139,24 +139,6 @@ install_typeface "/Library/Fonts/UbuntuMono-Regular.ttf" "Ubuntu Mono" "https://
 #####################################################################################
 install_configuration_file "$STYLELINT_SETTINGS" https://gist.githubusercontent.com/code-warrior/a766f7c32bab9a82b467601800b00a46/raw/768717143df9db9c593dabb38c3c7aa63c87f66b/"$STYLELINT_SETTINGS"
 
-while true
-do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using JavaScript? (y)es or (n)o. ${RESET}"  -n 1 -r ESLINT_RESPONSE
-
-   case $ESLINT_RESPONSE in
-      [yY]* )
-         install_configuration_file "$ESLINT_SETTINGS" https://gist.githubusercontent.com/code-warrior/c6f1b02730b6a7d08c241f5bf1b62258/raw/2cdf414c31785847889697c67a7bd4bbad35393c/"$ESLINT_SETTINGS"
-
-         break;;
-
-      [nN]* )
-         break;;
-
-      * )
-         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Using JavaScript? (y)es, (n)o, or (q)uit. ${RESET} ";;
-   esac
-done
-
 #####################################################################################
 # Install environment
 #####################################################################################

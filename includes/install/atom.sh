@@ -96,10 +96,6 @@ if [[ -n "$(apm install)" ]]; then
    apm install w3c-validation
    apm install linter-stylelint
    apm install emmet
-
-   if [[ $ESLINT_RESPONSE == 'y' || $ESLINT_RESPONSE == 'Y' ]]; then
-      apm install linter-eslint
-   fi
 else
    fail "Atom’s package manager (APM) is not installed." true
    fail "1. Launch Atom."
