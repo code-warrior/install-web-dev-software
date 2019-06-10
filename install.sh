@@ -141,24 +141,6 @@ install_configuration_file "$STYLELINT_SETTINGS" https://gist.githubusercontent.
 
 while true
 do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using Sass? (y)es or (n)o. ${RESET}"  -n 1 -r SASS_RESPONSE
-
-   case $SASS_RESPONSE in
-      [yY]* )
-         install_configuration_file "$SASS_LINT_SETTINGS" https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/sass/"$SASS_LINT_SETTINGS"
-
-         break;;
-
-      [nN]* )
-         break;;
-
-      * )
-         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Using Sass? (y)es, (n)o, or (q)uit. ${RESET} ";;
-   esac
-done
-
-while true
-do
    read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using JavaScript? (y)es or (n)o. ${RESET}"  -n 1 -r ESLINT_RESPONSE
 
    case $ESLINT_RESPONSE in
