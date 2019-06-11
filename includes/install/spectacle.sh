@@ -35,9 +35,10 @@ else
 
    warn "If you’re running Spectacle for the first time, do the following:" true
    warn "1. Click Open System Preferences."
-   warn "2. Unlock the lock in the lower left corner of Security & Privacy, if it’s locked."
-   warn "3. Check the box to the left of the Spectacle icon."
-   warn "4. Lock the dialog box, then continue."
+   warn "2. Click Security & Privacy."
+   warn "3. Disable the lock in the lower left corner, if it’s locked."
+   warn "4. Check the box to the left of the Spectacle icon."
+   warn "5. Enable the lock in the lower left corner, then continue."
    pause_and_warn
 
    inform "Downloading custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
