@@ -12,8 +12,9 @@ else
 
    inform "Unzipping GitHub Desktop... " true
    inform "Once the installer has been unzipped, move GitHub Desktop into the "
-   inform "Applications folder. When the copy is complete, return to this script "
-   inform "and continue."
+   inform "Applications folder in your computer’s root directory (/Applications), "
+   inform "not the Applications folder in your home directory (~/Applications). "
+   inform "When the copy is complete, return to this script and continue."
    open "$GITHUB_DESKTOP_INSTALLER"
    pause_and_warn
 
