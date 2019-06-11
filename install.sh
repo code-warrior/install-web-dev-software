@@ -25,11 +25,14 @@ else
 fi
 
 show "This script will install, update, and/or configure files and applications "
-show "that you will use in Web Design at RISD."
+show "that you will use in this course."
 
-inform "Enter your computer’s password so that this script can make the " true
-inform "necessary changes to your system. For security purposes, Mac OS "
-inform "will not echo your password to The Terminal as you type: "
+inform "For this script to install the software required for this " true
+inform "course, and for it to make course-related enhancements to "
+inform "your system, it requires that you enter your computer’s "
+inform "password. Your input is captured by your computer not this "
+inform "script. For security purposes, macOS will not echo your "
+inform "password to The Terminal as you type."
 
 sudo -p "Password:" echo "${BG_WHITE}> Thank you! ${RESET}"
 
