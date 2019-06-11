@@ -42,9 +42,6 @@ printf ">>>      Computer name:   %s\n" "$COMP_NAME"
 printf ">>>      Localhost name:  %s\n" "$LOCL_NAME"
 printf ">>>      Full hostname:   %s\n" "$HOST_NAME"
 printf ">>>      Connection MAC:  %s\n" "$MAC_ADDRS"
-inform
-inform "Checking the validity of this set up. If it is not valid, it will "
-inform "fail or warn you."
 pause_and_warn
 
 #####################################################################################
