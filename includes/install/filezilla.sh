@@ -14,9 +14,12 @@ else
    open "$FILEZILLA_INSTALLER"
 
    inform "The Finder should have loaded the GNU General Public License. " true
-   inform "Click “Agree”, then click the FileZilla installer icon."
-   inform "Skip all the ads, then, once the installer is successfully installed,"
-   inform "close FileZilla and come back to this script."
+   inform "1. Click Agree, then wait for the installer to open."
+   inform "2. Double-click the FileZilla.app icon to begin the installation."
+   inform "3. At the Introduction screen, click Continue."
+   inform "4. At the Optional Offer screen, click Skip."
+   inform "5. At the Summary screen, click Finish, then wait for FileZilla to launch."
+   inform "6. Quit FileZilla, then return to this script."
    pause_and_warn
 
    inform "Ejecting FileZilla disc image..." true
