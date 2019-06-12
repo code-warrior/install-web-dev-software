@@ -34,11 +34,14 @@ else
    open /Applications/Spectacle.app
 
    warn "If you’re running Spectacle for the first time, do the following:" true
-   warn "1. Click Open System Preferences."
+   warn "1. Open System Preferences."
    warn "2. Click Security & Privacy."
-   warn "3. Disable the lock in the lower left corner, if it’s locked."
-   warn "4. Check the box to the left of the Spectacle icon."
-   warn "5. Enable the lock in the lower left corner, then continue."
+   warn "3. Choose Accessibility from the list of applications on the left."
+   warn "4. Disable the lock in the lower left corner, if it’s locked."
+   warn "5. Check the box to the left of the Spectacle icon."
+   warn "6. Enable the lock in the lower left corner."
+   warn "7. Quit System Preferences."
+   warn "8. Return to this script."
    pause_and_warn
 
    inform "Downloading custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
