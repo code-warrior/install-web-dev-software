@@ -8,7 +8,7 @@ if [[ -d "/Applications/Atom.app/" ]]; then
    pause_and_warn
 else
    inform "Downloading Atom..."
-   curl 'https://atom-installer.github.com/v1.33.1/atom-mac.zip?s=1545258140&ext=.zip' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3657.0 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8' -H 'Referer: https://atom.io/' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' --compressed -o "$ATOM_INSTALLER"
+   curl 'https://atom-installer.github.com/v1.38.0/atom-mac.zip?s=1560259770&ext=.zip' -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' -H 'Upgrade-Insecure-Requests: 1' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' -H 'Referer: https://atom-installer.github.com/' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' -H 'Cookie: _octo=GH1.1.717032160.1560262164; logged_in=no; _ga=GA1.2.1465276013.1560262165' --compressed --compressed -o "$ATOM_INSTALLER"
 
    inform "Unzipping Atom... " true
    open "$ATOM_INSTALLER"
