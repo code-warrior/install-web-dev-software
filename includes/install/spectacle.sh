@@ -54,7 +54,7 @@ else
       warn "The Spectacle shortcuts were not successfully installed. Please investigate, then continue."
       pause_and_warn
    else
-      inform "The Spectacle shortcuts were installed successfully."
+      inform "The Spectacle shortcuts were installed successfully." true
       inform
    fi
 fi
