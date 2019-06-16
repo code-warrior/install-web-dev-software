@@ -14,7 +14,7 @@ else
    open $TYPORA_DISK_IMAGE
 
    inform "The Finder should have loaded the Typora image." true
-   inform "1. Drag Typora over the shortcut to the Applications folder."
+   inform "1. Drag Typora.app over the shortcut to the Applications folder."
    inform "2. Wait until the copy is finished."
    inform "3. Return to this script."
    pause_and_warn
