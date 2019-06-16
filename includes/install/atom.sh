@@ -84,6 +84,7 @@ else
          pause_and_warn
       else
          inform "$ATOM_CONFIG was installed successfully."
+         inform
       fi
    fi
 fi

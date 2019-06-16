@@ -178,5 +178,6 @@ source ./includes/install/github-desktop.sh
 source ./includes/install/atom.sh
 
 inform "The installation is complete. " true
+inform
 inform "Open Spectacle’s Preferences pane and check off ‘Launch Spectacle at login’. "
 inform "Please restart The Terminal and Spectacle."

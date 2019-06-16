@@ -32,5 +32,6 @@ else
       warn "Removing $FILEZILLA_INSTALLER was not successful, Please remove manually." true
    else
       inform "FileZilla’s disc image ejected and removed successfully." true
+      inform
    fi
 fi

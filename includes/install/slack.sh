@@ -29,5 +29,6 @@ else
       warn "Removing $SLACK_INSTALLER was not successful, Please remove manually." true
    else
       inform "Slack’s disc image ejected and removed successfully." true
+      inform
    fi
 fi

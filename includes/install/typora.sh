@@ -29,5 +29,6 @@ else
       warn "Removing $TYPORA_DISK_IMAGE was not successful, Please remove manually." true
    else
       inform "Typora’s disc image ejected and removed successfully." true
+      inform
    fi
 fi

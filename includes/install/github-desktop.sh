@@ -23,4 +23,5 @@ else
    rm -f "$GITHUB_DESKTOP_INSTALLER"
 
    inform "GitHub Desktop’s installer removed." true
+   inform
 fi
