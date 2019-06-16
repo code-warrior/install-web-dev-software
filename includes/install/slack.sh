@@ -20,7 +20,7 @@ else
    pause_and_warn
 
    inform "Ejecting Slack’s disc image..." true
-   diskutil eject /Volumes/Slack/
+   diskutil eject /Volumes/Slack.app/
 
    inform "Removing Slack’s disc image..." true
    rm -f "$SLACK_INSTALLER"
