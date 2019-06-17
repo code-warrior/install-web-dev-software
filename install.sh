@@ -171,11 +171,6 @@ do
    esac
 done
 
-source ./includes/install/slack.sh
-source ./includes/install/spectacle.sh
-source ./includes/install/typora.sh
-source ./includes/install/github-desktop.sh
-source ./includes/install/atom.sh
 #####################################################################################
 # Install Slack
 #####################################################################################
