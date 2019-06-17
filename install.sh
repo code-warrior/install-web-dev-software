@@ -177,6 +177,26 @@ source ./includes/install/typora.sh
 source ./includes/install/github-desktop.sh
 source ./includes/install/atom.sh
 #####################################################################################
+# Install Slack
+#####################################################################################
+while true
+do
+   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Need Slack? (y)es or (n)o. ${RESET}"  -n 1 -r SLACK_RESPONSE
+
+   case $SLACK_RESPONSE in
+      [yY]* )
+         source ./includes/install/slack.sh
+
+         break;;
+
+      [nN]* )
+         break;;
+
+      * )
+         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Need Slack? (y)es, (n)o, or (q)uit. ${RESET} ";;
+   esac
+done
+
 #####################################################################################
 # Install GitHub Desktop
 #####################################################################################
@@ -198,6 +218,26 @@ do
    esac
 done
 
+#####################################################################################
+# Install Atom
+#####################################################################################
+while true
+do
+   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Need Atom? (y)es or (n)o. ${RESET}"  -n 1 -r ATOM_RESPONSE
+
+   case $ATOM_RESPONSE in
+      [yY]* )
+         source ./includes/install/atom.sh
+
+         break;;
+
+      [nN]* )
+         break;;
+
+      * )
+         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Need Atom? (y)es, (n)o, or (q)uit. ${RESET} ";;
+   esac
+done
 
 inform "The installation is complete. " true
 inform
