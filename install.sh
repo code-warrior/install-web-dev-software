@@ -151,7 +151,7 @@ install_configuration_file "$EDITOR_CONFIG_SETTINGS" https://raw.githubuserconte
 source ./includes/install/tomorrow-night.sh
 
 #####################################################################################
-# Install software
+# Install FileZilla
 #####################################################################################
 while true
 do
