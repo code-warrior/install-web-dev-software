@@ -153,23 +153,6 @@ source ./includes/install/tomorrow-night.sh
 #####################################################################################
 # Install FileZilla
 #####################################################################################
-while true
-do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Using FileZilla? (y)es or (n)o. ${RESET}"  -n 1 -r FILEZILLA_RESPONSE
-
-   case $FILEZILLA_RESPONSE in
-      [yY]* )
-         source ./includes/install/filezilla.sh
-
-         break;;
-
-      [nN]* )
-         break;;
-
-      * )
-         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Using FileZilla? (y)es, (n)o, or (q)uit. ${RESET} ";;
-   esac
-done
 
 #####################################################################################
 # Install Slack
