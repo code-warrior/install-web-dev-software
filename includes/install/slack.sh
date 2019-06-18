@@ -9,7 +9,8 @@ if [[ -d "/Applications/Slack.app/" ]]; then
 else
    while true
    do
-      read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Install Slack? (y)es or (n)o. ${RESET}"  -n 1 -r SLACK_RESPONSE
+      warn "Install Slack?" true
+      read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  [y]es or [n]o. ${RESET}"  -n 1 -r SLACK_RESPONSE
 
       case $SLACK_RESPONSE in
          [yY]* )

@@ -9,7 +9,8 @@ if [[ -d "/Applications/FileZilla.app/" ]]; then
 else
    while true
    do
-      read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Install FileZilla? (y)es or (n)o. ${RESET}"  -n 1 -r FILEZILLA_RESPONSE
+      warn "Install FileZilla?" true
+      read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  [y]es or [n]o. ${RESET}"  -n 1 -r FILEZILLA_RESPONSE
 
       case $FILEZILLA_RESPONSE in
          [yY]* )
