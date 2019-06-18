@@ -46,7 +46,7 @@ function pause_and_warn () {
    echo -e "${BG_YELLOW}${BLACK}${BOLD}>>>>  $1 ${RESET}"
    echo -e "${BG_YELLOW}${BLACK}${BOLD}>>>> ${RESET}"
 
-   read -r -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Continue? [Yy] ${RESET} " -n 1 -r
+   read -r -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Press [y] to continue or any key to quit. ${RESET} " -n 1 -r
 
    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
       fail "Exiting..." true
