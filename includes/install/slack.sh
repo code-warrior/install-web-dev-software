@@ -43,7 +43,7 @@ else
             break;;
 
          * )
-            echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Install Slack? (y)es, (n)o, or (q)uit. ${RESET} ";;
+            echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Install Slack? [y]es, [n]o, or [q]uit. ${RESET} ";;
       esac
    done
 fi
