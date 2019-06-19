@@ -36,7 +36,7 @@ else
             rm -f "$FILEZILLA_INSTALLER"
 
             if [[ -e "$FILEZILLA_INSTALLER" ]]; then
-               warn "Removing $FILEZILLA_INSTALLER was not successful, Please remove manually."
+               warn "Removing $FILEZILLA_INSTALLER was not successful. Please remove manually."
             else
                inform "FileZilla’s disc image ejected and removed successfully."
             fi
