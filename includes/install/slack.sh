@@ -20,7 +20,7 @@ else
             inform "Installing Slack..."
             open "$SLACK_INSTALLER"
 
-            inform "The Finder should have mounted $SLACK_INSTALLER. "
+            inform "The Finder should have mounted $SLACK_INSTALLER. " true
             inform "1. Drag Slack.app over the shortcut to the Applications folder."
             inform "2. Wait until the copy is finished."
             inform "3. Return to this script."

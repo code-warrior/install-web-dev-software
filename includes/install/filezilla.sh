@@ -20,7 +20,7 @@ else
             inform "Installing FileZilla..."
             open "$FILEZILLA_INSTALLER"
 
-            inform "The Finder should have loaded the GNU General Public License. "
+            inform "The Finder should have loaded the GNU General Public License. " true
             inform "1. Click Agree, then wait for the installer to open."
             inform "2. Double-click the FileZilla.app icon to begin the installation."
             inform "3. At the Introduction screen, click Continue."
