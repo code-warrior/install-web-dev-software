@@ -163,23 +163,6 @@ source ./includes/install/slack.sh
 #####################################################################################
 # Install Spectacle
 #####################################################################################
-while true
-do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Need Spectacle? (y)es or (n)o. ${RESET}"  -n 1 -r SPECTACLE_RESPONSE
-
-   case $SPECTACLE_RESPONSE in
-      [yY]* )
-         source ./includes/install/spectacle.sh
-
-         break;;
-
-      [nN]* )
-         break;;
-
-      * )
-         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Need Spectacle? (y)es, (n)o, or (q)uit. ${RESET} ";;
-   esac
-done
 
 #####################################################################################
 # Install Typora
