@@ -168,23 +168,6 @@ source ./includes/install/spectacle.sh
 #####################################################################################
 # Install Typora
 #####################################################################################
-while true
-do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Need Typora? (y)es or (n)o. ${RESET}"  -n 1 -r TYPORA_RESPONSE
-
-   case $TYPORA_RESPONSE in
-      [yY]* )
-         source ./includes/install/typora.sh
-
-         break;;
-
-      [nN]* )
-         break;;
-
-      * )
-         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Need Typora? (y)es, (n)o, or (q)uit. ${RESET} ";;
-   esac
-done
 
 #####################################################################################
 # Install GitHub Desktop
