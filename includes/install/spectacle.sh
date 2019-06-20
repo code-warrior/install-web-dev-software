@@ -40,6 +40,18 @@ else
             inform "Launching Spectacle..."
             open /Applications/Spectacle.app
 
+            inform "Downloading custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
+            curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/"$SPECTACLE_SHORTCUTS_FILE"
+
+            inform "Installing custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
+            mv -v "$SPECTACLE_SHORTCUTS_FILE" ~/Library/Application\ Support/Spectacle/
+
+            if [[ -e "$SPECTACLE_SHORTCUTS_FILE" ]]; then
+               warn "The Spectacle shortcuts were not successfully installed. Please investigate, then continue."
+            else
+               inform "The Spectacle shortcuts were installed successfully."
+            fi
+
             inform "If you’re running Spectacle for the first time, do the following:" true
             inform "1. Open System Preferences."
             inform "2. Click Security & Privacy."
@@ -52,18 +64,6 @@ else
             inform "9. Restart Spectacle."
             inform "10. Return to this script."
             pause_awhile
-
-            inform "Downloading custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
-            curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/master/spectacle/"$SPECTACLE_SHORTCUTS_FILE"
-
-            inform "Installing custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
-            mv -v "$SPECTACLE_SHORTCUTS_FILE" ~/Library/Application\ Support/Spectacle/
-
-            if [[ -e "$SPECTACLE_SHORTCUTS_FILE" ]]; then
-               warn "The Spectacle shortcuts were not successfully installed. Please investigate, then continue."
-            else
-               inform "The Spectacle shortcuts were installed successfully."
-            fi
 
             break;;
 
