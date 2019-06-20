@@ -178,5 +178,6 @@ source ./includes/install/github-desktop.sh
 #####################################################################################
 # Install Atom
 #####################################################################################
+source ./includes/install/atom.sh
 
 inform "The installation is complete. Please restart The Terminal." true
