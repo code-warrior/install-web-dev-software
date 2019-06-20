@@ -173,23 +173,6 @@ source ./includes/install/typora.sh
 #####################################################################################
 # Install GitHub Desktop
 #####################################################################################
-while true
-do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Need GitHub Desktop? (y)es or (n)o. ${RESET}"  -n 1 -r GITHUB_DESKTOP_RESPONSE
-
-   case $GITHUB_DESKTOP_RESPONSE in
-      [yY]* )
-         source ./includes/install/github-desktop.sh
-
-         break;;
-
-      [nN]* )
-         break;;
-
-      * )
-         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Need GitHub Desktop? (y)es, (n)o, or (q)uit. ${RESET} ";;
-   esac
-done
 
 #####################################################################################
 # Install Atom
