@@ -178,22 +178,5 @@ source ./includes/install/github-desktop.sh
 #####################################################################################
 # Install Atom
 #####################################################################################
-while true
-do
-   read -p "${BG_YELLOW}${BLACK}${BOLD}>>>>  Need Atom? (y)es or (n)o. ${RESET}"  -n 1 -r ATOM_RESPONSE
-
-   case $ATOM_RESPONSE in
-      [yY]* )
-         source ./includes/install/atom.sh
-
-         break;;
-
-      [nN]* )
-         break;;
-
-      * )
-         echo "${BG_YELLOW}${BLACK}${BOLD}>>>>  Please choose. Need Atom? (y)es, (n)o, or (q)uit. ${RESET} ";;
-   esac
-done
 
 inform "The installation is complete. Please restart The Terminal." true
