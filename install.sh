@@ -196,7 +196,4 @@ do
    esac
 done
 
-inform "The installation is complete. " true
-inform
-inform "Open Spectacle’s Preferences pane and check off ‘Launch Spectacle at login’. "
-inform "Please restart The Terminal and Spectacle."
+inform "The installation is complete. Please restart The Terminal." true

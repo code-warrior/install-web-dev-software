@@ -48,7 +48,9 @@ else
             inform "5. Check the box to the left of the Spectacle icon."
             inform "6. Enable the lock in the lower left corner."
             inform "7. Quit System Preferences."
-            inform "8. Return to this script."
+            inform "8. Open Spectacle’s Preferences pane and check off ‘Launch Spectacle at login’."
+            inform "9. Restart Spectacle."
+            inform "10. Return to this script."
             pause_awhile
 
             inform "Downloading custom Spectacle shortcuts ($SPECTACLE_SHORTCUTS_FILE)..."
