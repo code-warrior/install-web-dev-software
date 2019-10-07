@@ -54,7 +54,7 @@ else
 
             inform "If you’re running Spectacle for the first time, do the following:" true
             inform "1. Open System Preferences."
-            inform "2. Click Security & Privacy."
+            inform "2. Click Security & Privacy along the top row."
             inform "3. Choose Accessibility from the list of applications on the left."
             inform "4. Disable the lock in the lower left corner, if it’s locked."
             inform "5. Check the box to the left of the Spectacle icon."
