@@ -27,7 +27,8 @@ else
             inform "4. Launch Atom, then wait for the file menus to populate the menu bar."
             inform "5. Click Atom in the menu bar in the top left, next to the Apple icon."
             inform "6. Choose Install Shell Commands."
-            inform "7. Click OK when presented with the 'Commands installed' dialog box, then quit Atom."
+            inform "7. Enter your password at the prompt."
+            inform "8. Click OK when presented with the 'Commands installed' dialog box, then quit Atom."
             inform "8. Return to this script."
             pause_awhile
 
