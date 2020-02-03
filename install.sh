@@ -83,6 +83,8 @@ show "Software update program has been run."
 inform "Checking for XCode Command Line Tools..." true
 
 case $OS_VERSION in
+   *10.15*)
+      cmdline_version="CLTools_Executables" ;; # Catalina
    *10.14*)
       cmdline_version="CLTools_Executables" ;; # Mojave
    *10.13*)
