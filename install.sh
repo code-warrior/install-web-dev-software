@@ -50,7 +50,7 @@ pause_and_warn
 #####################################################################################
 # Check if current user is admin
 #####################################################################################
-if echo "$USER_GRPS" | grep -q -w admin; then
+if echo "$GROUPS_TO_WHICH_USER_BELONGS" | grep -q -w admin; then
    echo "" > /dev/null
 else
    fail "The current user does not have administrator privileges. This " true
