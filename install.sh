@@ -39,7 +39,7 @@ printf ">>>      Computer Type:   Mac OS %s\n" "$OS_VERSION"
 printf ">>>      Short user name: %s\n" "$USER_NAME"
 printf ">>>      Long user name:  %s\n" "$FULL_NAME"
 printf ">>>      Computer name:   %s\n" "$COMP_NAME"
-printf ">>>      Localhost name:  %s\n" "$LOCL_NAME"
+printf ">>>      Localhost name:  %s\n" "$LOCAL_HOST_NAME"
 printf ">>>      Full hostname:   %s\n" "$HOST_NAME"
 printf ">>>      Connection MAC:  %s\n" "$MAC_ADDRS"
 inform
