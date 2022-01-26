@@ -60,7 +60,7 @@ else
    exit 1
 fi
 
-if [[ "$OS_NUMBER" -lt "11" ]]; then
+if [[ "$MINOR_OS_NUMBER" -lt "11" ]]; then
    fail "This installation program was built and tested in macOS Mojave " true
    fail "(10.14). It may not work in previous versions, especially those"
    fail "from 2014 (10.10, Yosemite) or older. To be safe, exit this"
