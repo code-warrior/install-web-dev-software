@@ -208,7 +208,6 @@ do
 done
 
 source ./includes/install/spectacle.sh
-source ./includes/install/typora.sh
 source ./includes/install/github-desktop.sh
 source ./includes/install/atom.sh
 
