@@ -13,7 +13,7 @@ else
    inform "Unzipping Atom... " true
    inform "Once the install has been unzipped, move Atom into the Applications "
    inform "folder and launch it. Then, click Atom in the menu bar on the left, "
-   inform "right next to the Apple icon, choose Install Shell Commands, and close"
+   inform "next to the Apple icon, choose Install Shell Commands, and close"
    inform "Atom once you get confirmation. Return to this script and continue."
    open "$ATOM_INSTALLER"
    pause_and_warn
