@@ -9,9 +9,9 @@ curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/
 open "$TERMINAL_THEME"
 
 inform "Type ⌘ + , to bring up The Terminal’s preferences. Choose Profiles, " true
-inform "which is the second tab on the top, then scroll all the way down along the "
-inform "left column until you find TomorrowNight. Click Default, then close the "
-inform "Profiles page."
+inform "which is the second tab on the top, then scroll all the way down along "
+inform "the left column until you find TomorrowNight. Click Default, then close "
+inform "the Profiles page."
 
 pause_and_warn "Once the theme is installed, come back to this Terminal window." true
 
