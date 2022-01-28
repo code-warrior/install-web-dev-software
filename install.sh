@@ -60,6 +60,25 @@ else
    exit 1
 fi
 
+if [[ "$MAJOR_NUMBER_OF_CURRENT_OS" -lt "$MINIMUM_MAJOR_NUMBER_REQUIRED" ]]; then
+   fail "You are running a very old version of macOS, from about 2015. The " true
+   fail "minimum version required to run the software installed by this script "
+   fail "is $MINIMUM_MAJOR_NUMBER_REQUIRED.\
+$MINIMUM_MINOR_NUMBER_REQUIRED.\
+$MINIMUM_PATCH_NUMBER_REQUIRED. Your version is $OS_VERSION. Please update your OS to at least"
+   fail "El Capitan and try again."
+   fail
+   fail "Exiting..."
+
+   exit 1
+else
+   inform "This installation script was updated in Jan 2022 to work in macOS " true
+   inform "Monterey (12.1). It may work in versions as early as macOS El Capitan "
+   inform "(10.11.0). However, versions older than that are likely not compatible "
+   inform "with this script and are unadvisable to use."
+fi
+
+
 #####################################################################################
 # Check for recommended software updates
 #####################################################################################
@@ -93,15 +112,6 @@ esac
 #####################################################################################
 if [[ -n "$(pkgutil --pkgs=com.apple.pkg.$cmdline_version)" ]]; then
    show "Command Line Tools are installed!"
-if [[ "$MAJOR_NUMBER_OF_CURRENT_OS" -lt "$MINIMUM_MAJOR_NUMBER_REQUIRED" ]]; then
-   fail "You are running a very old version of macOS, from about 2015. The " true
-   fail "minimum version required to run the software installed by this script "
-   fail "is $MINIMUM_MAJOR_NUMBER_REQUIRED.\
-$MINIMUM_MINOR_NUMBER_REQUIRED.\
-$MINIMUM_PATCH_NUMBER_REQUIRED. Your version is $OS_VERSION. Please update your OS to at least"
-   fail "El Capitan and try again."
-   fail
-   fail "Exiting..."
 else
    fail "Command Line Tools are not installed!" true
    fail "Running 'xcode-select --install' Please click Install!"
@@ -109,10 +119,6 @@ else
    xcode-select --install
 
    exit 1
-   inform "This installation script was updated in Jan 2022 to work in macOS " true
-   inform "Monterey (12.1). It may work in versions as early as macOS El Capitan "
-   inform "(10.11.0). However, versions older than that are likely not compatible "
-   inform "with this script and are unadvisable to use."
 fi
 
 inform "Setting OS configurations..." true
