@@ -20,7 +20,7 @@ else
    pause_and_warn
 
    inform "Ejecting FileZilla disc image..." true
-   diskutil eject /Volumes/FileZilla/
+   diskutil eject /Volumes/FileZilla/ >/dev/null 2>/dev/null
 
    inform "Removing FileZilla disc image..." true
    rm -f "$FILEZILLA_INSTALLER"
