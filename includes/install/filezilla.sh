@@ -21,12 +21,15 @@ else
 
    inform "Ejecting FileZilla disc image..." true
    diskutil eject /Volumes/FileZilla/ >/dev/null 2>/dev/null
+   if [ $? -eq 0 ]; then
+      inform "Removing FileZilla disc image..." true
+      rm -f "$FILEZILLA_INSTALLER"
 
-   inform "Removing FileZilla disc image..." true
-   rm -f "$FILEZILLA_INSTALLER"
-
-   if [[ -e "$FILEZILLA_INSTALLER" ]]; then
-      warn "Removing $FILEZILLA_INSTALLER was not successful, Please remove manually." true
+      if [[ -e "$FILEZILLA_INSTALLER" ]]; then
+         warn "Removing $FILEZILLA_INSTALLER was not successful, Please remove manually." true
+      else
+         inform "FileZilla’s disc image ejected and removed successfully." true
+      fi
    else
       fail "The FileZilla disc image could not be found, and thus, nothing was ejected. " true
    fi
