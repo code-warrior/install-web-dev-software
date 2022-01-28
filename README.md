@@ -1,5 +1,5 @@
 # Mac OS Web Development Software Installer
-v1.0.2
+v1.0.3
 
 The enclosed script installs Mac-based HTML-, CSS-, Sass-, and JavaScript-related software and configuration files for any web development course you take with me. If you’re using macOS Catalina, Big Sur, or Monterey, then you’ll first need to grant The Terminal access to your disk. Follow [this tutorial](https://osxdaily.com/2018/10/09/fix-operation-not-permitted-terminal-error-macos/), then proceed below.
 
