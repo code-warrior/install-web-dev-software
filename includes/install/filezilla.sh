@@ -28,6 +28,6 @@ else
    if [[ -e "$FILEZILLA_INSTALLER" ]]; then
       warn "Removing $FILEZILLA_INSTALLER was not successful, Please remove manually." true
    else
-      inform "FileZilla’s disc image ejected and removed successfully." true
+      fail "The FileZilla disc image could not be found, and thus, nothing was ejected. " true
    fi
 fi
