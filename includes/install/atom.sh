@@ -57,7 +57,7 @@ if [[ -e "$HOME/.atom/$ATOM_CONFIG" ]]; then
          mv -v "$ATOM_CONFIG" "$HOME/.atom/"
 
          if [[ -e "$ATOM_CONFIG" ]]; then
-            warn "$ATOM_CONFIG was not successfully installed. Please investigate, then continue."
+            fail "$ATOM_CONFIG was not successfully installed. Please investigate, then continue."
             pause_and_warn
          else
             inform "$ATOM_CONFIG was installed successfully."
