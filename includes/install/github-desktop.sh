@@ -8,7 +8,21 @@ if [[ -d "/Applications/GitHub Desktop.app/" ]]; then
    pause_and_warn
 else
    inform "Downloading GitHub Desktop..."
-   curl 'https://desktop.githubusercontent.com/releases/1.5.1-b1e34b0f/GitHubDesktop.zip' -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' -H 'Upgrade-Insecure-Requests: 1' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' -H 'DNT: 1' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' --compressed -o GitHubDesktop.zip
+   curl 'https://desktop.githubusercontent.com/github-desktop/releases/2.9.6-9196a1ae/GitHubDesktop-x64.zip' \
+  -H 'authority: desktop.githubusercontent.com' \
+  -H 'upgrade-insecure-requests: 1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36' \
+  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'sec-fetch-mode: navigate' \
+  -H 'sec-fetch-user: ?1' \
+  -H 'sec-fetch-dest: document' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'referer: https://desktop.github.com/' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  --compressed -o $GITHUB_DESKTOP_INSTALLER
 
    inform "Unzipping GitHub Desktop... " true
    inform "Once the installer has been unzipped, move GitHub Desktop into the "
