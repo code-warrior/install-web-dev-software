@@ -110,7 +110,7 @@ else
    fail "2. Click Atom in the menu bar on the left, next to the Apple icon."
    fail "3. Choose Install Shell Commands."
    fail "4. Close Atom."
-   fail "5. Restart this script." true
+   fail "5. Restart this script."
 
    exit 0
 fi
