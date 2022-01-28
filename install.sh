@@ -66,18 +66,17 @@ if [[ "$MAJOR_NUMBER_OF_CURRENT_OS" -lt "$MINIMUM_MAJOR_NUMBER_REQUIRED" ]]; the
    fail "is $MINIMUM_MAJOR_NUMBER_REQUIRED.\
 $MINIMUM_MINOR_NUMBER_REQUIRED.\
 $MINIMUM_PATCH_NUMBER_REQUIRED. Your version is $OS_VERSION. Please update your OS to at least"
-   fail "El Capitan and try again."
+   fail "El Capitán and try again."
    fail
    fail "Exiting..."
 
    exit 1
 else
    inform "This installation script was updated in Jan 2022 to work in macOS " true
-   inform "Monterey (12.1). It may work in versions as early as macOS El Capitan "
+   inform "Monterey (12.1). It may work in versions as early as macOS El Capitán "
    inform "(10.11.0). However, versions older than that are likely not compatible "
    inform "with this script and are unadvisable to use."
 fi
-
 
 #####################################################################################
 # Check for recommended software updates
