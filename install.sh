@@ -93,21 +93,7 @@ show "Software updated!"
 #####################################################################################
 inform "Checking for XCode Command Line Tools..." true
 
-case $OS_VERSION in
-   *10.14*)
-      cmdline_version="CLTools_Executables" ;; # Mojave
-   *10.13*)
-      cmdline_version="CLTools_Executables" ;; # High Sierra
-   *10.12*)
-      cmdline_version="CLTools_Executables" ;; # Sierra
-   *10.11*)
-      cmdline_version="CLTools_Executables"    # El Capitán
-      pause_and_warn "Outdated OS. Consider upgrading before continuing." true;;
-   *)
-      fail "Sorry! You’ll have to upgrade your OS to $MINIMUM_MAC_OS or above." true;
-
-      exit 1;;
-esac
+cmdline_version="CLTools_Executables"
 
 #####################################################################################
 # Check for Command Line Tools based on OS version
