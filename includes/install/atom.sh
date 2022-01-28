@@ -8,7 +8,7 @@ if [[ -d "/Applications/Atom.app/" ]]; then
    pause_and_warn
 else
    inform "Downloading Atom..."
-   curl 'https://atom-installer.github.com/v1.33.1/atom-mac.zip?s=1545258140&ext=.zip' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3657.0 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8' -H 'Referer: https://atom.io/' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' --compressed -o "$ATOM_INSTALLER"
+   curl 'https://atom-installer.github.com/v1.58.0/atom-mac.zip?s=1627025609&ext=.zip' -H 'authority: atom-installer.github.com' -H 'upgrade-insecure-requests: 1' -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36' -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' -H 'sec-fetch-site: cross-site' -H 'sec-fetch-mode: navigate' -H 'sec-fetch-user: ?1' -H 'sec-fetch-dest: document' -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' -H 'sec-ch-ua-mobile: ?0' -H 'sec-ch-ua-platform: "macOS"' -H 'referer: https://atom.io/' -H 'accept-language: en-US,en;q=0.9' --compressed -o "$ATOM_INSTALLER"
 
    inform "Unzipping Atom... " true
    inform "Once the install has been unzipped, move Atom into the Applications "
