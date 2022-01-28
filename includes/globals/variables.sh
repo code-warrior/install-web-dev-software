@@ -16,6 +16,10 @@ export BG_WHITE="$(tput setab 7)"
 # Style
 export BOLD="$(tput bold)"
 
+export MINIMUM_MAJOR_NUMBER_REQUIRED="10"
+export MINIMUM_MINOR_NUMBER_REQUIRED="11"
+export MINIMUM_PATCH_NUMBER_REQUIRED="0"
+
 export MINIMUM_MAC_OS="10.11.0"
 export OS_VERSION="$(sw_vers -productVersion)"
 export COMP_NAME="$(scutil --get ComputerName)"
