@@ -60,6 +60,9 @@ else
    exit 1
 fi
 
+#####################################################################################
+# Check if macOS version is at least El Capitán (10.11.0)
+#####################################################################################
 if [[ "$MAJOR_NUMBER_OF_CURRENT_OS" -lt "$MINIMUM_MAJOR_NUMBER_REQUIRED" ]]; then
    fail "You are running a very old version of macOS, from about 2015. The " true
    fail "minimum version required to run the software installed by this script "
