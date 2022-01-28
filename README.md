@@ -9,5 +9,5 @@ The enclosed script installs Mac-based HTML-, CSS-, Sass-, and JavaScript-relate
 
 1. **Open The Terminal**: Perform a Spotlight search by typing `⌘` + `spacebar` and entering “terminal”
 2. **Navigate to The Root of This Repo**: Type `cd` into The Terminal, followed by a space. *Do not hit `return` just yet.* Drag the folder icon to the left of `install-web-dev-software` in the title bar of this repo into The Terminal window. Hit `return`
-3. Give the script executable access to your file system by typing the following: `chmod 755 install.sh`
+3. **Grant the Script Access**: Give the script executable access to your file system by typing the following: `chmod 755 install.sh`
 4. **Run The Installer**: Type `./install.sh`
