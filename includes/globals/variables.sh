@@ -30,6 +30,7 @@ export FULL_NAME="$(finger "$USER_NAME" | awk '/Name:/ {print $4" "$5}')"
 export GROUPS_TO_WHICH_USER_BELONGS="$(id -Gn "$USER_NAME")"
 export MAJOR_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 1)"
 export MINOR_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 2)"
+export PATCH_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 3)"
 export MAC_ADDRS="$(ifconfig en0 | grep ether | sed -e 's/^[ \t|ether|\s|\n]*//')"
 export MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
