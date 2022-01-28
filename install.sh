@@ -95,9 +95,6 @@ inform "Checking for XCode Command Line Tools..." true
 
 cmdline_version="CLTools_Executables"
 
-#####################################################################################
-# Check for Command Line Tools based on OS version
-#####################################################################################
 if [[ -n "$(pkgutil --pkgs=com.apple.pkg.$cmdline_version)" ]]; then
    show "Command Line Tools are installed!"
 else
