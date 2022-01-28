@@ -8,7 +8,7 @@ curl -O https://raw.githubusercontent.com/code-warrior/web-dev-env-config-files/
 
 open "$TERMINAL_THEME"
 
-inform "Bring up The Terminal’s preferences by typing ⌘ + ,. Choose Profiles, " true
+inform "Type ⌘ + , to bring up The Terminal’s preferences. Choose Profiles, " true
 inform "which is the second tab on the top, then scroll all the way down along the "
 inform "left column until you find TomorrowNight. Click Default, then close the "
 inform "Profiles page."
