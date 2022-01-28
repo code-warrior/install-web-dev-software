@@ -96,6 +96,17 @@ li {
       <h4>4 / Run The Installer</h4>
       <p>Type <kbd>./install.sh</kbd> and then hit <kbd>return</kbd>.</p>
 
+      <h3>Update bash to v5</h3>
+      <p>Source: <a href="https://itnext.io/upgrading-bash-on-macos-7138bd1066ba" target="_blank" rel="noopener">Upgrading Bash on macOS</a> by Daniel Weibel</p>
+
+      <ol>
+        <li>Launch The Terminal</li>
+        <li>Run <code>brew install bash</code></li>
+        <li>Edit the shells file using Atom: <code>sudo atom /etc/shells</code></li>
+        <li>Add <code>/usr/local/bin/bash</code> to the tail of the <code>shells</code> file</li>
+        <li>Set the default shell for the current user: <code>chsh -s /usr/local/bin/bash</code></li>
+      </ol>
+
       <h2>Windows and Linux Users</h2>
       <p>All the software you need must be downloaded/installed manually. Visit the <b>Software Requirements</b> section of the syllabus to the course you’re taking with me for more.</p>
    </main>

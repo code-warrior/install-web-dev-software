@@ -11,3 +11,14 @@ The enclosed script installs Mac-based HTML-, CSS-, Sass-, and JavaScript-relate
 2. **Navigate to The Root of This Repo**: Type `cd` into The Terminal, followed by a space. *Do not hit `return` just yet.* Drag the folder icon to the left of `install-web-dev-software` in the title bar of this repo into The Terminal window. Hit `return`
 3. **Grant the Script Access**: Give the script executable access to your file system by typing the following: `chmod 755 install.sh`
 4. **Run The Installer**: Type `./install.sh`
+
+---
+
+## Update bash to v5
+Source: [Upgrading Bash on macOS](https://itnext.io/upgrading-bash-on-macos-7138bd1066ba) by Daniel Weibel
+
+1. Launch The Terminal
+2. Run `brew install bash`
+3. Edit the shells file using Atom: `sudo atom /etc/shells`
+4. Add `/usr/local/bin/bash` to the tail of the `shells` file
+5. Set the default shell for the current user: `chsh -s /usr/local/bin/bash`
