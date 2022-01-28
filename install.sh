@@ -118,6 +118,7 @@ else
    fail "Command Line Tools are not installed!" true
    fail "Running 'xcode-select --install' Please click Install!"
    fail "After installing, please rerun this script." true
+
    xcode-select --install
 
    exit 1
