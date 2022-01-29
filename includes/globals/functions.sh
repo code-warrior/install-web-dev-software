@@ -125,3 +125,11 @@ function install_typeface () {
       rm -fr "$4"
    fi
 }
+
+function check_if_apm_package_exists () {
+   if apm list | grep "$1@"; then
+       inform "APM package $1 exists. Skipping..."
+   else
+       apm install "$1"
+   fi
+}
