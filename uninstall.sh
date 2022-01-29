@@ -1,6 +1,5 @@
 sudo rm -f ~/Library/Fonts/IBMPlexMono*.ttf
 rm -f ~/Library/Fonts/UbuntuMono*.ttf
-rm -fr /Applications/FileZilla.app
 rm -fr /Applications/Spectacle.app
 rm -fr /Applications/Typora.app
 rm -fr /Applications/GitHub\ Desktop.app/

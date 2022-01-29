@@ -8,7 +8,6 @@ Make a list of files to remove, then create a basic script to remove them. This 
 `rm ~/Library/Fonts/UbuntuMono*.ttf`
 
 ## Remove programs
-rm -f /Applications/FileZilla.app
 rm -f /Applications/Spectacle.app
 rm -f /Applications/Typora.app
 rm -f /Applications/GitHub\ Desktop.app/
