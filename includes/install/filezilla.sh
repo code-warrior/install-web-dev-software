@@ -8,8 +8,9 @@ if [[ -d "/Applications/FileZilla.app/" ]]; then
    pause_and_warn
 else
    inform "Downloading FileZilla..."
-   curl 'https://dl2.cdn.filezilla-project.org/client/'$FILEZILLA_INSTALLER'?h=G1kS7oKn6Dd7N6UlFgf3iQ&x=1643409430' \
-     -H 'authority: dl2.cdn.filezilla-project.org' \
+   curl 'https://dl1.cdn.filezilla-project.org/client/FileZilla_3.57.0_macosx-x86.app.tar.bz2?h=3YKwvSBgGjy1D785mSjJyw&x=1643474243' \
+     -H 'authority: dl1.cdn.filezilla-project.org' \
+     -H 'cache-control: max-age=0' \
      -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
      -H 'sec-ch-ua-mobile: ?0' \
      -H 'sec-ch-ua-platform: "macOS"' \
@@ -18,7 +19,6 @@ else
      -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
      -H 'sec-fetch-site: same-site' \
      -H 'sec-fetch-mode: navigate' \
-     -H 'sec-fetch-user: ?1' \
      -H 'sec-fetch-dest: document' \
      -H 'referer: https://filezilla-project.org/' \
      -H 'accept-language: en-US,en;q=0.9' \
