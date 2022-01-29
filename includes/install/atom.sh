@@ -88,21 +88,21 @@ fi
 #####################################################################################
 inform "Installing Atom packages..."
 if [[ -n "$(apm install)" ]]; then
-   apm install busy-signal
-   apm install intentions
-   apm install linter-ui-default
-   apm install linter
-   apm install editorconfig
-   apm install w3c-validation
-   apm install linter-stylelint
-   apm install emmet
+   check_if_apm_package_exists "busy-signal"
+   check_if_apm_package_exists "intentions"
+   check_if_apm_package_exists "linter-ui-default"
+   check_if_apm_package_exists "linter"
+   check_if_apm_package_exists "editorconfig"
+   check_if_apm_package_exists "w3c-validation"
+   check_if_apm_package_exists "linter-stylelint"
+   check_if_apm_package_exists "emmet"
 
    if [[ $SASS_RESPONSE == 'y' || $SASS_RESPONSE == 'Y' ]]; then
-      apm install linter-sass-lint
+      check_if_apm_package_exists "linter-sass-lint"
    fi
 
    if [[ $ESLINT_RESPONSE == 'y' || $ESLINT_RESPONSE == 'Y' ]]; then
-      apm install linter-eslint
+      check_if_apm_package_exists "linter-eslint"
    fi
 else
    fail "Atom’s package manager (APM) is not installed." true
