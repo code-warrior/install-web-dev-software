@@ -80,7 +80,7 @@ else
    inform "This installation script was updated in Jan 2022 to work in macOS " true
    inform "Monterey (12.1). It may work in versions as early as macOS El Capitán "
    inform "(10.11.0). However, versions older than that are likely not compatible "
-   inform "with this script and are unadvisable to use."
+   inform "with this script and are inadvisable to use."
 fi
 
 #####################################################################################
