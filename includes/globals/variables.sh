@@ -34,7 +34,7 @@ export PATCH_NUMBER_OF_CURRENT_OS="$(echo "$OS_VERSION" | cut -d "." -f 3)"
 export MAC_ADDRS="$(ifconfig en0 | grep ether | sed -e 's/^[ \t|ether|\s|\n]*//')"
 export MAC_ADDRS="$(echo -e "${MAC_ADDRS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
-export ATOM_INSTALLER="atom-mac.zip"
+export VS_CODE_INSTALLER="VSCode-darwin-universal.zip"
 export ATOM_CONFIG="config.cson"
 export BASH_ALIAS=".bash_aliases"
 export BASH_PFILE=".bash_profile"
