@@ -190,6 +190,6 @@ source ./includes/install/tomorrow-night.sh
 
 source ./includes/install/rectangle.sh
 source ./includes/install/github-desktop.sh
-source ./includes/install/atom.sh
+source ./includes/install/vs-code.sh
 
 inform "The installation is complete. " true
