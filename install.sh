@@ -188,10 +188,8 @@ source ./includes/install/tomorrow-night.sh
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-source ./includes/install/spectacle.sh
+source ./includes/install/rectangle.sh
 source ./includes/install/github-desktop.sh
 source ./includes/install/atom.sh
 
 inform "The installation is complete. " true
-inform "Open Spectacle’s Preferences pane and check off ‘Launch Spectacle at login’. "
-inform "Please restart The Terminal and Spectacle."
